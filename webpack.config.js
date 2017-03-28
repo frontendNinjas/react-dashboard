@@ -5,8 +5,11 @@ module.exports = {
 	entry: './src/index.js',
 	output:{
 		filename: 'bundle.js',
+		publicPath: '/js/',
 		path: path.resolve(__dirname, 'dist')
 	},
+	watch: true,
+	devtool: "#source-map",
 	module:{
 		loaders: [
 			{

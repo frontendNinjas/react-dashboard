@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/js/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 82);
@@ -9481,7 +9481,7 @@ var Header = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         null,
-        'Your header'
+        'Your header sad'
       );
     }
   }]);
@@ -21785,3 +21785,4 @@ module.exports = g;
 
 /***/ })
 /******/ ]);
+//# sourceMappingURL=bundle.js.map
