@@ -15,14 +15,15 @@ class Header extends React.Component {
           anchorOrigin={{horizontal: 'left', vertical: 'top'}}
           targetOrigin={{horizontal: 'left', vertical: 'top'}}
         >
-          <MenuItem to="/" primaryText="Home" />
-          <MenuItem to="/login" primaryText="Login" />
-          <MenuItem to="/products" primaryText="Products" />
+          <MenuItem linkButton containerElement={<Link to="/" />} primaryText="Home" />
+          <MenuItem linkButton containerElement={<Link to="/login" />} primaryText="Login" />
+          <MenuItem linkButton containerElement={<Link to="/products" />} primaryText="Products" />
         </IconMenu>
       </div>
     );
   }
 }
+
 
 
 export default Header;
