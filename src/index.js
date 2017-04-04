@@ -6,6 +6,7 @@ import Home from '../src/components/home/Home';
 import Login from '../src/components/login/Login';
 import Products from '../src/components/products/Products';
 
+
 ReactDOM.render(<Router history={hashHistory}>
          <Route path="/" component={App}>
          	 <IndexRoute component={Home}/>
