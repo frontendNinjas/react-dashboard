@@ -4,17 +4,22 @@ import MyAwesomeReactComponent from '../src/components/Products/MyAwesomeReactCo
 import {Link} from 'react-router';
 import Header from '../src/components/header/Header';
 import Footer from '../src/components/footer/Footer';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+injectTapEventPlugin();
+
 class App extends React.Component{
   render(){
     return (
       <div>
-      	<Header/>
-		{this.props.children}
-		<Footer/>
-		 <h2>{this.props.params.repoName}</h2>
-		  <MuiThemeProvider>
-    			<MyAwesomeReactComponent />
-  		  </MuiThemeProvider>
+	    <MuiThemeProvider>
+	    	<Header/>
+	    </MuiThemeProvider>	
+      	<MuiThemeProvider>
+			{this.props.children}
+		</MuiThemeProvider>
+		<MuiThemeProvider>
+			<Footer/>
+		</MuiThemeProvider>			
       </div>
     )
   }
