@@ -5,7 +5,7 @@ class Header extends React.Component {
     return (
     	<div>
         <ul>
-          <li><Link activeClassName="activeLinks" to="/home">Home</Link></li>
+          <li><IndexLink activeClassName="activeLinks" to="/">Home</IndexLink></li>
           <li><Link activeClassName="activeLinks" to="/login">Login</Link></li>
           <li><Link activeClassName="activeLinks" to="/products">Products</Link></li>
         </ul>
