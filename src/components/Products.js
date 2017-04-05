@@ -5,7 +5,6 @@ class Products extends React.Component{
 	render(){
 		return(
 			<div>
-			<h2>{this.props.params.productName}</h2>
 				<ul>
 					<li>
 						<Link to="/products/mobile">Mobile</Link>						

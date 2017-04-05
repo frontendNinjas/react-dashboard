@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
-import { Router,Route,IndexRoute,hashHistory} from 'react-router';
-import App from '../src/App.js'
-import Home from '../src/components/home/Home';
-import Login from '../src/components/login/Login';
-import Products from '../src/components/products/Products';
-import Register from '../src/components/register/Register';
+import {Route,IndexRoute} from 'react-router';
+import AppUser from '../src/AppUser.js'
+import AppAdmin from '../src/AppAdmin.js'
+import homePageAdmin from '../src/admin/pages/homePageAdmin';
+import homePageUser from '../src/user/pages/homePageUser';
 
 export default(
-         <Route path="/" component={App}>
-           <IndexRoute component={Home}/>
-           <Route path="/login" component={Login}/>
-           <Route path="/register" component={Register}/>
-           <Route path="/products" component={Products}/>
-           <Route path="/products/:productName" component={Products}/>
-         </Route>
+		<Route>
+			<Route path="/" component={AppUser}>
+				<IndexRoute component={homePageUser}/>
+			</Route> 
+			<Route path="/admin" component={AppAdmin}>
+				<IndexRoute component={homePageAdmin}/>
+			</Route> 
+        </Route>  
     )
 
