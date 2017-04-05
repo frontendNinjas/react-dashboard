@@ -1,5 +1,20 @@
 .headerContainer{
-    width: 3%;
-    float: right;
-    height: 49px;
+    box-shadow: 4px 4px 40px 0 rgba(0,0,0,.05);
+    position: relative;
+    background-color: #fff;
+    height: 48px;
+}
+.headerContainer ul {
+	outline: none;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+    z-index: 1050;
+    box-shadow: 4px 4px 40px rgba(0,0,0,.05);
+    color: #666;
+    background: #fff;
+    line-height: 46px;
+}
+.headerContainer ul li {
+	float: right
 }
