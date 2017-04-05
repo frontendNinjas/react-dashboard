@@ -5,6 +5,7 @@ import {Link} from 'react-router';
 import Header from '../src/components/header/Header';
 import Footer from '../src/components/footer/Footer';
 import injectTapEventPlugin from 'react-tap-event-plugin';
+import Drawer from '../src/components/drawer/Drawer';
 import './appStyle.css';
 injectTapEventPlugin();
 
@@ -12,6 +13,11 @@ class App extends React.Component{
   render(){
     return (
       <div className="container">
+      <MuiThemeProvider>
+	      <aside>
+	       <Drawer />
+	      </aside>
+	   </MuiThemeProvider>	
 	    <MuiThemeProvider>
 	    	<Header/>
 	    </MuiThemeProvider>	
