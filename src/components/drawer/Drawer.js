@@ -26,7 +26,7 @@ class DrawerSimpleExample extends React.Component {
   render() {
     return (
       <div className="toggleIcon">
-		<ActionFlightTakeoff onTouchTap={this.handleToggle} style={iconStyles} color={blue500} />
+        <ActionHome onTouchTap={this.handleToggle} style={iconStyles} color={blue500}/>
         <Drawer open={this.state.open}>
           <MenuItem>Theme 1</MenuItem>
           <MenuItem>Theme 2</MenuItem>

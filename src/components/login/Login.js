@@ -5,7 +5,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 
 class Login extends React.Component {
   handleClick() {
-  		console.log('thoihdsf');
+  		console.log('You have been successfully logged in...');
   }			
   render() {
     return (

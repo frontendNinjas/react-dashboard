@@ -48,6 +48,7 @@ class Header extends React.Component {
               <MenuItem containerElement={<Link to="/" />} primaryText="Home" />
               <MenuItem containerElement={<Link to="/login" />} primaryText="Login" />
               <MenuItem containerElement={<Link to="/products" />} primaryText="Products" />
+              <MenuItem containerElement={<Link to="/register" />} primaryText="Register" />
             </IconMenu>
           </li>
           <li>
