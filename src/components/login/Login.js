@@ -4,6 +4,9 @@ import {Card, CardActions, CardHeader, CardTitle, CardText} from 'material-ui/Ca
 import RaisedButton from 'material-ui/RaisedButton';
 
 class Login extends React.Component {
+  handleClick() {
+  		console.log('thoihdsf');
+  }			
   render() {
     return (
     	<div>
@@ -14,7 +17,7 @@ class Login extends React.Component {
 		    	    <TextField hintText="@password" floatingLabelText="Password" type="password"/>
 		    	</CardText>
 			    <CardActions>	
-	      			<RaisedButton label="Submit" primary={true}/>
+	      			<RaisedButton onClick={this.handleClick} label="Submit" primary={true}/>
 	    		</CardActions>			    
 	    	</Card>    
     	</div>

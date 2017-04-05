@@ -5,6 +5,7 @@ import App from '../src/App.js'
 import Home from '../src/components/home/Home';
 import Login from '../src/components/login/Login';
 import Products from '../src/components/products/Products';
+import userApi from '../src/Api/userApi.js';
 
 
 ReactDOM.render(<Router history={hashHistory}>
