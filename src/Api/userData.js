@@ -1,13 +1,12 @@
-var userData = {
-	users:[
+var userData = [
 		{
 			username: 'harrkaur',
-			password: 'ujadmin',
+			password: 'letmein',
 			firstName: 'harminder',
 			lastName: 'kaur'
 		},{
 			username: 'kin22in',
-			password: 'test@12345',
+			password: 'aloha',
 			firstName: 'Pooja',
 			lastName: 'Sharma'
 		},{
@@ -16,7 +15,7 @@ var userData = {
 			firstName: 'Vanita',
 			lastName: 'chawla'
 		}
-	]
-};
+];
+
 
 export default userData;
