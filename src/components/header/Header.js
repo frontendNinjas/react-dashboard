@@ -10,6 +10,9 @@ import Avatar from 'material-ui/Avatar';
 import List from 'material-ui/List/List';
 import ListItem from 'material-ui/List/ListItem';
 
+import Badge from 'material-ui/Badge';
+import NotificationsIcon from 'material-ui/svg-icons/social/notifications';
+
 import {
   blue300,
   indigo900,
@@ -20,6 +23,7 @@ import {
 } from 'material-ui/styles/colors';
 
 const style = {margin: -6};
+const styleNotification = {padding:0}
 
 
 class Header extends React.Component {
@@ -42,6 +46,17 @@ class Header extends React.Component {
               <MenuItem linkButton containerElement={<Link to="/login" />} primaryText="Login" />
               <MenuItem linkButton containerElement={<Link to="/products" />} primaryText="Products" />
             </IconMenu>
+          </li>
+          <li>
+            <Badge style={styleNotification}
+              badgeContent={10}
+              secondary={true}
+              badgeStyle={{top: 0, right: -8}}
+            >
+              <IconButton tooltip="Notifications">
+                <NotificationsIcon />
+              </IconButton>
+            </Badge>
           </li>
         </ul>
       </div>
