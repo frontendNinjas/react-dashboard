@@ -1,69 +1,81 @@
 import React from 'react';
 import {BrowserRouter as Router,Link, IndexLink} from 'react-router';
+import '../styles/index.css';
 import IconMenu from 'material-ui/IconMenu';
-import MenuItem from 'material-ui/MenuItem';
 import IconButton from 'material-ui/IconButton';
-import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
-import './headerStyle.css';
-
+import FontIcon from 'material-ui/FontIcon';
+import NavigationExpandMoreIcon from 'material-ui/svg-icons/navigation/expand-more';
+import MenuItem from 'material-ui/MenuItem';
+import DropDownMenu from 'material-ui/DropDownMenu';
+import {Toolbar, ToolbarGroup, ToolbarSeparator, ToolbarTitle} from 'material-ui/Toolbar';
 import Avatar from 'material-ui/Avatar';
-import List from 'material-ui/List/List';
-import ListItem from 'material-ui/List/ListItem';
-
-import Badge from 'material-ui/Badge';
-import NotificationsIcon from 'material-ui/svg-icons/social/notifications';
-
-
-import {
-  blue300,
-  indigo900,
-  orange200,
-  deepOrange300,
-  pink400,
-  purple500,
-} from 'material-ui/styles/colors';
-
-const style = {margin: -6};
-const styleNotification = {padding:0}
-
 
 
 class Header extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: 3,
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange (event, index, value) {this.setState({value});}
+
+
   render() {
     return (
-      <div className="headerContainer">
-      <ul>
-         <li>
-            <List>
-              <ListItem disabled={true} leftAvatar={<Avatar src="../src/images/icon.jpg" size={30} style={style}/>}>
-              </ListItem>
-            </List>
-          </li>
-          <li>
-            <IconMenu
-              iconButtonElement={<IconButton><MoreVertIcon /></IconButton>}
-              anchorOrigin={{horizontal: 'left', vertical: 'top'}}
-              targetOrigin={{horizontal: 'left', vertical: 'top'}}>
-              <MenuItem containerElement={<Link to="/" />} primaryText="Home" />
-              <MenuItem containerElement={<Link to="/login" />} primaryText="Login" />
-              <MenuItem containerElement={<Link to="/products" />} primaryText="Products" />
-              <MenuItem containerElement={<Link to="/register" />} primaryText="Register" />
-            </IconMenu>
-          </li>
-          <li>
-            <Badge style={styleNotification}
-              badgeContent={10}
-              secondary={true}
-              badgeStyle={{top: 0, right: -8}}
-            >
-              <IconButton tooltip="Notifications">
-                <NotificationsIcon />
-              </IconButton>
-            </Badge>
-          </li>
-        </ul>
-      </div>
+        <header>
+         <div className="container">
+            <div className="top-header">
+                <Toolbar className="noBg">
+                  <ToolbarGroup firstChild={true}>
+                    <DropDownMenu value={this.state.value} onChange={this.handleChange}>
+                      <MenuItem value={1} primaryText="US Dollar" />
+                      <MenuItem value={2} primaryText="IND Rupee" />
+                      <MenuItem value={3} primaryText="AU Dollar" />
+                    </DropDownMenu>
+                  </ToolbarGroup>
+                  <ToolbarGroup>
+                   <img className="logo" src="../src/images/logo.png" /> 
+                  </ToolbarGroup>
+                  <ToolbarGroup>
+                    <MenuItem containerElement={<Link to="/admin" />} primaryText="Login" />
+                    <MenuItem containerElement={<Link to="/admin/register" />} primaryText="Register" />
+                    <ToolbarSeparator />
+                    <IconMenu
+                      iconButtonElement={
+                        <IconButton touch={true}>
+                          <NavigationExpandMoreIcon />
+                        </IconButton>
+                      }
+                    >
+                      <MenuItem primaryText="My Account" />
+                      <MenuItem primaryText="Wish List" />
+                      <MenuItem primaryText="Shopping Cart" />
+                      <MenuItem primaryText="Checkout" />
+                    </IconMenu>
+                  </ToolbarGroup>
+                </Toolbar>
+            </div>
+            <div className="main-header">
+              <Toolbar className="noBg">
+                <ToolbarGroup>
+                  <MenuItem containerElement={<Link to="/" />} primaryText="Home" />
+                  <MenuItem primaryText="Shop" />
+                  <MenuItem primaryText="Services" />
+                  <MenuItem containerElement={<Link to="/products" />} primaryText="Products" /> 
+                  <MenuItem primaryText="Blogs" /> 
+                  <MenuItem primaryText="Contacts" /> 
+                </ToolbarGroup>
+                <ToolbarGroup>
+                   <input type="search" placeholder="Search..." />
+                </ToolbarGroup>
+              </Toolbar>
+            </div>
+          </div>
+        </header>
     );
   }
 }

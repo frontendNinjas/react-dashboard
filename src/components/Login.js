@@ -4,12 +4,15 @@ import {Card, CardActions, CardHeader, CardTitle, CardText} from 'material-ui/Ca
 import RaisedButton from 'material-ui/RaisedButton';
 
 class Login extends React.Component {
+
   handleClick() {
   		console.log('You have been successfully logged in...');
-  }			
+  		window.location = "http://localhost:8080/#/admin/dashboard";  
+  }	
+
   render() {
     return (
-    	<div>
+    	<div className="login">
 	    	<Card>
 		    	<CardHeader title="Login"/>
 		    	<CardText>

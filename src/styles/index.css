@@ -1,5 +1,14 @@
 body{
 	background: #F6F6F6;
+	margin: 0
+}
+.login{
+    width: 30%;
+    margin: 46px auto;
+    
+}
+.container{
+	margin: 0 auto;
 }
 .footer {
 	 height: 48px;
@@ -10,4 +19,35 @@ body{
     background: #fff;
     box-shadow: 4px 4px 40px 0 rgba(0,0,0,.05);
     width: 100%;
+}
+
+header {
+    background: #FFFFFF;
+    border-bottom: 1px solid #e4e9ef;
+}
+ .top-header {
+    height: 55x;
+    border-bottom: 1px solid #e4e9ef;
+}
+.noBg{
+	    background-color: #fff !important
+	}
+
+.logo{
+	width:146px;
+	height: 44px
+}
+.sidebar-wrapper{
+    width: 250px;
+    background-color: #00BCD4;
+    height: 990px;
+    z-index: 1000;
+    position: fixed;
+}
+.whiteColor {
+    color: #fff !important
+}
+.page-content-wrapper{
+    margin-left: 286px;
+    width: 84%;
 }

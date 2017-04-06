@@ -14,6 +14,11 @@ var userData = [
 			password: '5min',
 			firstName: 'Vanita',
 			lastName: 'chawla'
+		},{
+			username: 'test',
+			password: 'password',
+			firstName: 'frontend',
+			lastName: 'ninjas'
 		}
 ];
 

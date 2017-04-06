@@ -9,11 +9,11 @@ import HardwareVideogameAsset from 'material-ui/svg-icons/hardware/videogame-ass
 import {red500, yellow500, blue500} from 'material-ui/styles/colors';
 
 const iconStyles = {
-  marginRight: 24,
+  marginRight:0,
 };
 
 
-class DrawerSimpleExample extends React.Component {
+class Sidebar extends React.Component {
 
   constructor(props) {
     super(props);
@@ -36,4 +36,4 @@ class DrawerSimpleExample extends React.Component {
   }
 }
 
-export default DrawerSimpleExample;
+export default Sidebar;

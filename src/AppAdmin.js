@@ -5,11 +5,9 @@ import './appStyle.css';
 class AppAdmin extends React.Component{	
   render(){
     return (
-      <div className="container">
 		<MuiThemeProvider>		
 			{this.props.children}	
 		</MuiThemeProvider>		
-      </div>
     )
   }
 }
