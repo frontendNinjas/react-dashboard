@@ -29,7 +29,7 @@ class HeaderAdmin extends React.Component {
         <header>
 	        <Toolbar className="noBg">
 	          <ToolbarGroup>
-	           <img className="logo" src="../src/images/logo.png" /> 
+	           <a href="/"><img className="logo" src="../src/images/logo.png" /></a>
 	          </ToolbarGroup>
 	          <ToolbarGroup>
                 <ToolbarTitle text="Harminder" />
@@ -41,7 +41,7 @@ class HeaderAdmin extends React.Component {
 	                </IconButton>
 	              }
 	            >
-	              <MenuItem containerElement={<Link to="/admin" />} primaryText="Logout" />
+	              <MenuItem containerElement={<Link to="/login" />} primaryText="Logout" />
 	              <MenuItem containerElement={<Link to="/" />} primaryText="User" />
 	            </IconMenu>
 	          </ToolbarGroup>

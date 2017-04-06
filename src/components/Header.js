@@ -41,7 +41,7 @@ class Header extends React.Component {
                    <img className="logo" src="../src/images/logo.png" /> 
                   </ToolbarGroup>
                   <ToolbarGroup>
-                    <MenuItem containerElement={<Link to="/admin" />} primaryText="Login" />
+                    <MenuItem containerElement={<Link to="/login" />} primaryText="Login" />
                     <MenuItem containerElement={<Link to="/admin/register" />} primaryText="Register" />
                     <ToolbarSeparator />
                     <IconMenu

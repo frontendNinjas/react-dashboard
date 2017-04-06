@@ -7,7 +7,7 @@ class Login extends React.Component {
 
   handleClick() {
   		console.log('You have been successfully logged in...');
-  		window.location = "http://localhost:8080/#/admin/dashboard";  
+  		window.location = "http://localhost:8080/#/admin";  
   }	
 
   render() {

@@ -11,6 +11,8 @@ import productsPageAdmin from '../src/admin/pages/productsPageAdmin';
 import userPageAdmin from '../src/admin/pages/userPageAdmin';
 import homePageUser from '../src/user/pages/homePageUser';
 import RegisterPageAdmin from '../src/admin/pages/RegisterPageAdmin';
+import DashboardPages from '../src/admin/pages/DashboardPages';
+import appearance from '../src/admin/pages/appearance';
 
 export default(
 		<Route>
@@ -23,10 +25,12 @@ export default(
 			<Route path="/admin" component={SecuredPageAdmin}>
 				<IndexRoute component={dashboardPageAdmin}/>
 				<Route path="/admin/register" component={RegisterPageAdmin}/>
+				<Route path="/admin/DashboardPages" component={DashboardPages}/>
 				<Route path="/admin/editpage" component={EditUserPageAdmin}/>
 				<Route path="/admin/Inventory" component={InventoryPageAdmin}/>
 				<Route path="/admin/products" component={productsPageAdmin}/>
 				<Route path="/admin/users" component={userPageAdmin}/>
+				<Route path="/admin/appearance" component={appearance}/>
 			</Route> 			
         </Route>  
     )
