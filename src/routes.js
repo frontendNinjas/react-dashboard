@@ -16,15 +16,17 @@ export default(
 			<Route path="/" component={AppUser}>
 				<IndexRoute component={homePageUser}/>
 			</Route> 
-			<Route path="/admin" component={AppAdmin}>
+			<Route path="/login" component={AppAdmin}>
 				<IndexRoute component={homePageAdmin}/>
+			</Route> 
+			<Route path="/admin" component={dashboardPageAdmin}>
+				<IndexRoute component={dashboardPageAdmin}/>
 				<Route path="/admin/register" component={RegisterPageAdmin}/>
-				<Route path="/admin/dashboard" component={dashboardPageAdmin}/>
 				<Route path="/admin/editpage" component={EditUserPageAdmin}/>
 				<Route path="/admin/Inventory" component={InventoryPageAdmin}/>
 				<Route path="/admin/products" component={productsPageAdmin}/>
 				<Route path="/admin/users" component={userPageAdmin}/>
-			</Route> 
+			</Route> 			
         </Route>  
     )
 

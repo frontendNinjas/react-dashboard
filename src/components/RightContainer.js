@@ -5,7 +5,7 @@ class RightContainer extends React.Component{
   render(){
     return (
 		<div className="page-content-wrapper">
-            yOUR mAIN CoNtEnT HeRe....
+            {this.props.body}
 		</div>	
     )
   }
