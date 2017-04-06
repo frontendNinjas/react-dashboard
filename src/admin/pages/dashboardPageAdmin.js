@@ -1,7 +1,7 @@
 import React from 'react';
 import LeftSidebar from '../../../src/components/LeftSidebar';
 import DashboardHeaderAdmin from '../../../src/admin/pages/dashboardHeaderAdmin';
-import RightMainContainer from '../../../src/components/RightMainContainer';
+import RightContainer from '../../../src/components/RightContainer';
 
 class dashboardPageAdmin extends React.Component{	
   render(){
@@ -10,7 +10,7 @@ class dashboardPageAdmin extends React.Component{
        <DashboardHeaderAdmin />	
        <div className="container">
        <LeftSidebar />
-       <RightMainContainer />
+       <RightContainer />
        </div>
      </div>	
     )

@@ -1,7 +1,7 @@
 import React from 'react';
 import MenuItem from 'material-ui/MenuItem';
 
-class RightMainContainer extends React.Component{	
+class RightContainer extends React.Component{	
   render(){
     return (
 		<div className="page-content-wrapper">
@@ -11,4 +11,4 @@ class RightMainContainer extends React.Component{
   }
 }
 
-export default RightMainContainer
+export default RightContainer
