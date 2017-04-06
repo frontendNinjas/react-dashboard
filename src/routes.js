@@ -3,7 +3,7 @@ import {Route,IndexRoute} from 'react-router';
 import AppUser from '../src/AppUser.js'
 import AppAdmin from '../src/AppAdmin.js'
 import homePageAdmin from '../src/admin/pages/homePageAdmin';
-import dashboardPageAdmin from '../src/admin/pages/dashboardPageAdmin';
+import SecuredPageAdmin from '../src/admin/pages/SecuredPageAdmin';
 import EditUserPageAdmin from '../src/admin/pages/EditUserPageAdmin';
 import InventoryPageAdmin from '../src/admin/pages/InventoryPageAdmin';
 import productsPageAdmin from '../src/admin/pages/productsPageAdmin';
@@ -19,8 +19,7 @@ export default(
 			<Route path="/login" component={AppAdmin}>
 				<IndexRoute component={homePageAdmin}/>
 			</Route> 
-			<Route path="/admin" component={dashboardPageAdmin}>
-				<IndexRoute component={dashboardPageAdmin}/>
+			<Route path="/admin" component={SecuredPageAdmin}>
 				<Route path="/admin/register" component={RegisterPageAdmin}/>
 				<Route path="/admin/editpage" component={EditUserPageAdmin}/>
 				<Route path="/admin/Inventory" component={InventoryPageAdmin}/>

@@ -3,7 +3,7 @@ import LeftSidebar from '../../../src/components/LeftSidebar';
 import DashboardHeaderAdmin from '../../../src/admin/pages/dashboardHeaderAdmin';
 import RightContainer from '../../../src/components/RightContainer';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-class dashboardPageAdmin extends React.Component{	
+class SecuredPageAdmin extends React.Component{	
   render(){
     return (
      <div>
@@ -21,4 +21,4 @@ class dashboardPageAdmin extends React.Component{
   }
 }
 
-export default dashboardPageAdmin
+export default SecuredPageAdmin
