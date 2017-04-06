@@ -29,7 +29,7 @@ class HeaderAdmin extends React.Component {
         <header>
 	        <Toolbar className="noBg">
 	          <ToolbarGroup>
-	           <img className="logo" src="../src/images/logo.png" /> 
+	           <a href="/"><img className="logo" src="../src/images/logo.png" /></a>
 	          </ToolbarGroup>
 	          <ToolbarGroup>
                 <ToolbarTitle text="Harminder" />
