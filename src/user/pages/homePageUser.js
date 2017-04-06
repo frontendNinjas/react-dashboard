@@ -1,10 +1,9 @@
 import React from 'react';
-import Products from '../../../src/components/Products';
 
-class homePageAdmin extends React.Component {
+class homePageUser extends React.Component {
 	render(){
-		return <Products/>
+		return <div>user home page</div>
 	}
 }
 
-export default homePageAdmin
+export default homePageUser
