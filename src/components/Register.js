@@ -4,14 +4,25 @@ import {Card, CardActions, CardHeader, CardTitle, CardText} from 'material-ui/Ca
 import RaisedButton from 'material-ui/RaisedButton';
 
 class Register extends React.Component {
+
+constructor(props) {
+	super(props)
+	this.props = props;
+
+	props = {
+		title: "Register"
+	  }
+}
+
   handleClick() {
   		console.log('You have been successfully Register');
-  }			
+  }	
+
   render() {
     return (
     	<div className="register">
 	    	<Card>
-		    	<CardHeader title="Register"/>
+		    	<CardHeader title={this.props.title}/>
 		    	<CardText>
 		    	    <TextField hintText="@first name" floatingLabelText="First Name"/><br />
 		    	    <TextField hintText="@last name" floatingLabelText="Last Name"/><br />
@@ -21,7 +32,7 @@ class Register extends React.Component {
 		    	    <TextField hintText="@confirm password" floatingLabelText="Confirm Password" type="password"/><br />
 		    	</CardText>
 			    <CardActions>	
-	      			<RaisedButton onClick={this.handleClick} label="Create Account" primary={true}/>
+	      			<RaisedButton onClick={this.handleClick} label="Create" primary={true}/>
 	    		</CardActions>			    
 	    	</Card>    
     	</div>

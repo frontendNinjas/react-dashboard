@@ -9,7 +9,10 @@ class LeftSidebar extends React.Component{
           <MenuItem containerElement={<Link to="/admin" />} className="whiteColor">Dashboard</MenuItem>
           <MenuItem containerElement={<Link to="/admin/DashboardPages" />} className="whiteColor">Pages</MenuItem>
           <MenuItem containerElement={<Link to="/admin/products" />} className="whiteColor">Products</MenuItem>
-          <MenuItem containerElement={<Link to="/admin/users" />} className="whiteColor">Users</MenuItem>
+          <MenuItem className="whiteColor">Users
+              <MenuItem containerElement={<Link to="/admin/allusers" />} className="whiteColor">All Users</MenuItem>
+              <MenuItem containerElement={<Link to="/admin/addnewusers" />} className="whiteColor">Add New User</MenuItem>       
+          </MenuItem>
           <MenuItem containerElement={<Link to="/admin/Inventory" />} className="whiteColor">Inventory</MenuItem>
           <MenuItem containerElement={<Link to="/admin/appearance" />} className="whiteColor">Appearance</MenuItem>
 		</div>	

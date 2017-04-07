@@ -1,10 +1,11 @@
 import React from 'react';
+import TableComponent from '../../../src/components/Table';
 
 class DashboardPages extends React.Component{	
   render(){
     return (
 		<div>
-			This is Dashboard Pages
+			 <TableComponent />
 		</div>	
     )
   }

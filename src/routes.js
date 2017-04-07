@@ -13,6 +13,7 @@ import homePageUser from '../src/user/pages/homePageUser';
 import RegisterPageAdmin from '../src/admin/pages/RegisterPageAdmin';
 import DashboardPages from '../src/admin/pages/DashboardPages';
 import appearance from '../src/admin/pages/appearance';
+import addnewuserPageAdmin from '../src/admin/pages/addnewuserPageAdmin';
 
 export default(
 		<Route>
@@ -29,7 +30,8 @@ export default(
 				<Route path="/admin/editpage" component={EditUserPageAdmin}/>
 				<Route path="/admin/Inventory" component={InventoryPageAdmin}/>
 				<Route path="/admin/products" component={productsPageAdmin}/>
-				<Route path="/admin/users" component={userPageAdmin}/>
+				<Route path="/admin/allusers" component={userPageAdmin}/>
+				<Route path="/admin/addnewusers" component={addnewuserPageAdmin}/>
 				<Route path="/admin/appearance" component={appearance}/>
 			</Route> 			
         </Route>  
