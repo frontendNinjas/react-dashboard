@@ -52,3 +52,15 @@ header {
     width: 84%;
     margin-top: 20px;
 }
+.col-md-4{
+    width: 24.3%
+}
+.todolistWrapper{
+   background-color:#fff;
+   padding:1px 30px;
+}
+.todolistBottom{
+    color: #FF9800;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
