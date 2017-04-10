@@ -1,24 +1,32 @@
 var userData = [
 		{
-			username: 'harrkaur',
+			username: 'harru',
 			password: 'letmein',
 			firstName: 'harminder',
-			lastName: 'kaur'
+			lastName: 'kaur',
+			fullName:'Harminder Kaur',
+			email: 'harminder.kaur@yahoo.com.au'
 		},{
-			username: 'kin22in',
+			username: 'pooji',
 			password: 'aloha',
 			firstName: 'Pooja',
-			lastName: 'Sharma'
+			lastName: 'Sharma',
+			fullName:'Pooja Sharma',
+			email: 'pooja.sharma@hotmail.com'
 		},{
 			username: 'vini',
 			password: '5min',
 			firstName: 'Vanita',
-			lastName: 'chawla'
+			lastName: 'chawla',
+			fullName:'Vinita Chawla',
+			email: 'vinita.chawla@gmail.com'
 		},{
 			username: 'test',
 			password: 'password',
 			firstName: 'frontend',
-			lastName: 'ninjas'
+			lastName: 'ninjas',
+			fullName:'Test Data',
+			email: 'frontend.ninjas@gmail.com'
 		}
 ];
 

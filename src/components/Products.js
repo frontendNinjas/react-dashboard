@@ -29,7 +29,6 @@ class Products extends React.Component{
 		return(
 			<div>
 				{this.props.products.map(this.productRow)}
-				<h2>Add Product</h2>
 				<input type="text" onChange={this.onProductChange} value={this.state.product.title} />
 				<input type="submit" value="Save" onClick={this.onClickSave} />				
 			</div>

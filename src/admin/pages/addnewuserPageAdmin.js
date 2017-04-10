@@ -14,6 +14,7 @@ constructor(props) {
   render(){
     return (
 		<div>
+		   <h3>Add New User</h3>
            <Register title={this.state.title} />
 		</div>	
     )

@@ -1,39 +1,57 @@
 import React from 'react';
 import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table';
-
+import userData from '../Api/userData'
 
 class TableComponent extends React.Component{	
+
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      fixedHeader: true,
+      stripedRows: true,
+      showRowHover: false,
+      selectable: true,
+      multiSelectable: false,
+      enableSelectAll: false,
+      showCheckboxes: true,
+    };
+  }
+
   render(){
     return (
 		 <Table>
-		    <TableHeader>
-		      <TableRow>
-		        <TableHeaderColumn>Title</TableHeaderColumn>
-		        <TableHeaderColumn>Name</TableHeaderColumn>
-		        <TableHeaderColumn>Status</TableHeaderColumn>
-		      </TableRow>
-		    </TableHeader>
-		    <TableBody>
-		      <TableRow>
-		        <TableRowColumn>1</TableRowColumn>
-		        <TableRowColumn>John Smith</TableRowColumn>
-		        <TableRowColumn>Employed</TableRowColumn>
-		      </TableRow>
-		      <TableRow>
-		        <TableRowColumn>2</TableRowColumn>
-		        <TableRowColumn>Randal White</TableRowColumn>
-		        <TableRowColumn>Unemployed</TableRowColumn>
-		      </TableRow>
-		      <TableRow>
-		        <TableRowColumn>3</TableRowColumn>
-		        <TableRowColumn>Stephanie Sanders</TableRowColumn>
-		        <TableRowColumn>Employed</TableRowColumn>
-		      </TableRow>
-		      <TableRow>
-		        <TableRowColumn>4</TableRowColumn>
-		        <TableRowColumn>Steve Brown</TableRowColumn>
-		        <TableRowColumn>Employed</TableRowColumn>
-		      </TableRow>
+          <TableHeader
+            displaySelectAll={this.state.showCheckboxes}
+            adjustForCheckbox={this.state.showCheckboxes}
+            enableSelectAll={this.state.enableSelectAll}
+          >
+            <TableRow>
+              <TableHeaderColumn colSpan="4" style={{textAlign: 'center'}}>
+                <h3>All User Detail</h3>
+              </TableHeaderColumn>
+            </TableRow>
+            <TableRow>
+              <TableHeaderColumn tooltip="The User ID">ID</TableHeaderColumn>
+              <TableHeaderColumn tooltip="The Name">Full Name</TableHeaderColumn>
+              <TableHeaderColumn tooltip="The user">User Name</TableHeaderColumn>
+              <TableHeaderColumn tooltip="The Name">Name</TableHeaderColumn>
+            </TableRow>
+          </TableHeader>
+		    <TableBody
+	            displayRowCheckbox={this.state.showCheckboxes}
+	            deselectOnClickaway={this.state.deselectOnClickaway}
+	            showRowHover={this.state.showRowHover}
+	            stripedRows={this.state.stripedRows}
+			    >
+	            {userData.map( (row, index) => (
+	              <TableRow key={index} selected={row.selected}>
+	                <TableRowColumn>{index}</TableRowColumn>
+	                <TableRowColumn>{row.fullName}</TableRowColumn>
+	                <TableRowColumn>{row.username}</TableRowColumn>
+	                <TableRowColumn>{row.email}</TableRowColumn>
+	              </TableRow>
+	              ))}
 		    </TableBody>
 		  </Table>
     )

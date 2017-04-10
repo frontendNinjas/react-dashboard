@@ -14,6 +14,7 @@ import RegisterPageAdmin from '../src/admin/pages/RegisterPageAdmin';
 import DashboardPages from '../src/admin/pages/DashboardPages';
 import appearance from '../src/admin/pages/appearance';
 import addnewuserPageAdmin from '../src/admin/pages/addnewuserPageAdmin';
+import addnewproducts from '../src/admin/pages/addnewproducts';
 
 export default(
 		<Route>
@@ -33,6 +34,7 @@ export default(
 				<Route path="/admin/allusers" component={userPageAdmin}/>
 				<Route path="/admin/addnewusers" component={addnewuserPageAdmin}/>
 				<Route path="/admin/appearance" component={appearance}/>
+				<Route path="/admin/addnewproducts" component={addnewproducts}/>
 			</Route> 			
         </Route>  
     )
