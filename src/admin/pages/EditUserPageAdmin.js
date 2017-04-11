@@ -1,6 +1,6 @@
 import React from 'react';
 
-class EditUserPageAdmin extends React.Component{	
+class editUserPageAdmin extends React.Component{	
   render(){
     return (
 		<div>
@@ -10,4 +10,4 @@ class EditUserPageAdmin extends React.Component{
   }
 }
 
-export default EditUserPageAdmin
+export default editUserPageAdmin

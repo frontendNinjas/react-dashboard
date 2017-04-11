@@ -1,7 +1,7 @@
 import React from 'react';
 import Register from '../../../src/components/Register';
 
-class addnewuserPageAdmin extends React.Component{	
+class addNewUserPageAdmin extends React.Component{	
 
 constructor(props) {
 	super(props)
@@ -21,4 +21,4 @@ constructor(props) {
   }
 }
 
-export default addnewuserPageAdmin
+export default addNewUserPageAdmin

@@ -1,7 +1,7 @@
 import React from 'react';
 import TableComponent from '../../../src/components/Table';
 
-class DashboardPages extends React.Component{	
+class dashboardPages extends React.Component{	
   render(){
     return (
 		<div>
@@ -11,4 +11,4 @@ class DashboardPages extends React.Component{
   }
 }
 
-export default DashboardPages
+export default dashboardPages

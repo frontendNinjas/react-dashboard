@@ -1,6 +1,6 @@
 import React from 'react';
 
-class InventoryPageAdmin extends React.Component{	
+class inventoryPageAdmin extends React.Component{	
   render(){
     return (
 		<div>
@@ -10,4 +10,4 @@ class InventoryPageAdmin extends React.Component{
   }
 }
 
-export default InventoryPageAdmin
+export default inventoryPageAdmin

@@ -1,7 +1,7 @@
 import React from 'react';
 import Products from '../../../src/components/Products';
 
-class addnewproducts extends React.Component{	
+class addNewProducts extends React.Component{	
   render(){
     return (
 		<div>
@@ -13,4 +13,4 @@ class addnewproducts extends React.Component{
   }
 }
 
-export default addnewproducts
+export default addNewProducts

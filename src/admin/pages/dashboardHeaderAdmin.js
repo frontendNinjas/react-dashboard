@@ -2,7 +2,7 @@ import React from 'react';
 import HeaderAdmin from '../../../src/components/HeaderAdmin';
 import Sidebar from '../../../src/components/Sidebar';
 
-class DashboardHeaderAdmin extends React.Component{	
+class dashboardHeaderAdmin extends React.Component{	
   render(){
     return (
 	   <HeaderAdmin />
@@ -10,4 +10,4 @@ class DashboardHeaderAdmin extends React.Component{
   }
 }
 
-export default DashboardHeaderAdmin
+export default dashboardHeaderAdmin
