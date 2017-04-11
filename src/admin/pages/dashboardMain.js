@@ -2,7 +2,7 @@ import React from 'react';
 import ToDoList from '../../../src/components/ToDoList';
 import TableComponent from '../../../src/components/Table';
 
-class dashboardPageAdmin extends React.Component{	
+class dashboardMain extends React.Component{	
   render(){
     return (
     	<div>
@@ -19,4 +19,4 @@ class dashboardPageAdmin extends React.Component{
   }
 }
 
-export default dashboardPageAdmin
+export default dashboardMain

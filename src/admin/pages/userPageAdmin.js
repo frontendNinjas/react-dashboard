@@ -13,8 +13,8 @@ class userPageAdmin extends React.Component{
     	 <div>
     	  <h3>All User List</h3>
     	      	  <hr/>
-    	    <Link to="/admin/addnewusers">
-                <RaisedButton label="Add New Product" primary={true} style={style} />    
+    	    <Link to="/admin/add-new-users">
+                <RaisedButton label="Add New User" primary={true} style={style} />    
             </Link>
     	   <TableComponent />
     	 </div>

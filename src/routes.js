@@ -4,17 +4,17 @@ import AppUser from '../src/AppUser.js'
 import AppAdmin from '../src/AppAdmin.js'
 import homePageAdmin from '../src/admin/pages/homePageAdmin';
 import securedPageAdmin from '../src/admin/pages/securedPageAdmin';
-import dashboardPageAdmin from '../src/admin/pages/dashboardPageAdmin';
 import editUserPageAdmin from '../src/admin/pages/editUserPageAdmin';
 import inventoryPageAdmin from '../src/admin/pages/inventoryPageAdmin';
 import productsPageAdmin from '../src/admin/pages/productsPageAdmin';
 import userPageAdmin from '../src/admin/pages/userPageAdmin';
 import homePageUser from '../src/user/pages/homePageUser';
 import registerPageAdmin from '../src/admin/pages/registerPageAdmin';
-import dashboardPages from '../src/admin/pages/dashboardPages';
-import appearance from '../src/admin/pages/appearance';
+import websitePagesAdmin from '../src/admin/pages/websitePagesAdmin';
+import themes from '../src/admin/pages/themes';
 import addNewUserPageAdmin from '../src/admin/pages/addNewUserPageAdmin';
 import addNewProducts from '../src/admin/pages/addNewProducts';
+import dashboardMain from '../src/admin/pages/dashboardMain';
 
 export default(
 		<Route>
@@ -25,15 +25,15 @@ export default(
 				<IndexRoute component={homePageAdmin}/>
 			</Route> 
 			<Route path="/admin" component={securedPageAdmin}>
-				<IndexRoute component={dashboardPageAdmin}/>
+				<IndexRoute component={dashboardMain}/>
 				<Route path="/admin/register" component={registerPageAdmin}/>
-				<Route path="/admin/dashboard-pages" component={dashboardPages}/>
+				<Route path="/admin/website-pages-admin" component={websitePagesAdmin}/>
 				<Route path="/admin/edit-page" component={editUserPageAdmin}/>
 				<Route path="/admin/inventory" component={inventoryPageAdmin}/>
 				<Route path="/admin/all-products" component={productsPageAdmin}/>
 				<Route path="/admin/all-users" component={userPageAdmin}/>
 				<Route path="/admin/add-new-users" component={addNewUserPageAdmin}/>
-				<Route path="/admin/appearance" component={appearance}/>
+				<Route path="/admin/themes" component={themes}/>
 				<Route path="/admin/add-new-products" component={addNewProducts}/>
 			</Route> 			
         </Route>  

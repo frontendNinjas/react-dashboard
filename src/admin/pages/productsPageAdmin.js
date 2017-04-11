@@ -13,9 +13,9 @@ class productsPageAdmin extends React.Component{
 		<div>
 		 <h3>Products</h3>
 		 <hr />
-		    <Link to="/admin/addnewproducts">
-                <RaisedButton label="Add New Product" primary={true} style={style} />    
-            </Link>
+		    <Link to="/admin/add-new-products">
+            <RaisedButton label="Add New Product" primary={true} style={style} />    
+         </Link>
 	       <TableComponent />
     	</div>	
     )
