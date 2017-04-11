@@ -8,19 +8,19 @@ class TableComponent extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      fixedHeader: true,
+      fixedHeader: false,
       stripedRows: true,
       showRowHover: false,
       selectable: true,
       multiSelectable: false,
-      enableSelectAll: false,
+      enableSelectAll: true,
       showCheckboxes: true,
     };
   }
 
   render(){
     return (
-		 <Table>
+		 <Table multiSelectable={true} >
           <TableHeader
             displaySelectAll={this.state.showCheckboxes}
             adjustForCheckbox={this.state.showCheckboxes}
