@@ -1,4 +1,4 @@
-import userData from '../Api/userData'
+import userData from '../api/userData'
 import _clone from 'lodash/clone'
 import _find from 'lodash/find'
 import _remove from 'lodash/remove'

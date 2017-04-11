@@ -1,6 +1,6 @@
 import React from 'react';
 import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table';
-import userData from '../Api/userData'
+import userData from '../api/userData'
 
 class TableComponent extends React.Component{	
 
