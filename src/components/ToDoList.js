@@ -19,18 +19,19 @@ const iconStyles = {
 
 
 class ToDoList extends React.Component{	
-constructor(props,context) {
+  
+  constructor(props,context) {
 		super(props,context);
 		
 		this.state = {
-			product: {title: ''}
+			product: {title: ''},
+			showResults: false
 		}
 
-
 		this.onProductChange = this.onProductChange.bind(this)
-		this.onClickSave = this.onClickSave.bind(this)
-		this.handleFocusChange = this.handleFocusChange.bind(this)
+		this.productRow = this.productRow.bind(this)
 	}
+	
 	onProductChange(event){
 		const product = this.state.product;
 		product.title = event.target.value;
@@ -38,6 +39,7 @@ constructor(props,context) {
 	}
 
 	onClickSave(){
+		this.setState({ showResults: true });
 		this.props.actions.createProduct(this.state.product);
 	}
 
@@ -46,34 +48,41 @@ constructor(props,context) {
         	product: {title: ''}
         })
     }
-	productRow(product, index){
+
+    handleClearList(){
+    	console.log("ssjfjsdfdjsfjs")
+    }
+
+	productRow(product, index, thisArg){
 			return <div key={index}>
-			        <i className="material-icons" style={iconStyles} color={blue500}>mode_edit</i>
+			         <i className="material-icons" style={iconStyles} color={blue500}>mode_edit</i>
 		              {product.title}
-		             &nbsp;<i className="material-icons" style={iconStyles} color={blue500}>cancel</i>
+		             <a onClick={() => this.handleClearList()}> <i className="material-icons" style={iconStyles} color={blue500}>cancel</i></a>
 		            </div>
     }
+
 	render(){
-		return(
-		  <div className="todolistWrapper">
-			<h5>TodoList</h5>
-		  	<TextField 
-		  	    onFocus={this.handleFocusChange}
-		  	    onChange={this.onProductChange} 
-		  	    value={this.state.product.title} 
-		  	    hintText="Hint Text" 
-		  	    floatingLabelText="Todo"/>
-		  	<RaisedButton 
-		  	    type="submit" 
-		  	    label="Add" 
-		  	    primary={true} 
-		  	    style={style} 
-		  	    onClick={this.onClickSave} />
-		   	<div className="todolistBottom">
-		      {this.props.products.map(this.productRow)}
-	    	</div>
-	 		</div>		
-		)
+		var todoList =
+              <div className="todolistWrapper">
+				<h5>TodoList</h5>
+			  	<TextField 
+			  	    onFocus={() => this.handleFocusChange()}
+			  	    onChange={this.onProductChange} 
+			  	    value={this.state.product.title} 
+			  	    hintText="Hint Text" 
+			  	    floatingLabelText="Todo"/>
+			  	<RaisedButton 
+			  	    type="submit" 
+			  	    label="Add" 
+			  	    primary={true} 
+			  	    style={style} 
+			  	    onClick={() => this.onClickSave()} />
+
+	             <div className="todolistBottom">
+		            {this.props.products.map(this.productRow)}
+				 </div>
+	 		    </div>	
+		return (todoList);
 	}
 }
 

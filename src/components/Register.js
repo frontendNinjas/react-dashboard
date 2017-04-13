@@ -1,17 +1,22 @@
 import React from 'react';
-import TextField from 'material-ui/TextField';
+import Input from '../../src/components/Input';
 import {Card, CardActions, CardHeader, CardTitle, CardText} from 'material-ui/Card';
-import RaisedButton from 'material-ui/RaisedButton';
+import Buttons from '../../src/components/Buttons';
 
 class Register extends React.Component {
 
 constructor(props) {
 	super(props)
-	this.props = props;
-
-	props = {
-		title: "Register"
-	  }
+    this.state =({
+    	title:"Register",
+    	buttonLabel:"Create",
+    	firstname:"First Name",
+    	lastname:"Last Name",
+    	emailaddress:"Email Address",
+    	dob:"Date of Birth",
+    	password:"Password",
+    	confirmpassword:"Confirm Password"
+    })
 }
 
   handleClick() {
@@ -22,17 +27,17 @@ constructor(props) {
     return (
     	<div className="register">
 	    	<Card>
-		    	<CardHeader title={this.props.title}/>
+		    	<CardHeader title={this.state.title}/>
 		    	<CardText>
-		    	    <TextField hintText="@first name" floatingLabelText="First Name"/><br />
-		    	    <TextField hintText="@last name" floatingLabelText="Last Name"/><br />
-		    	    <TextField hintText="@email address" floatingLabelText="Email Address"/><br />
-		    	    <TextField hintText="@DOB" floatingLabelText="Date of Birth"/><br />
-		    	    <TextField hintText="@passord" floatingLabelText="Password" type="password"/><br />
-		    	    <TextField hintText="@confirm password" floatingLabelText="Confirm Password" type="password"/><br />
+		            <Input label={this.state.firstname} />
+		            <Input label={this.state.lastname} />
+		            <Input label={this.state.emailaddress} />
+		            <Input label={this.state.dob} />
+		            <Input label={this.state.password} />
+		            <Input label={this.state.confirmpassword} />
 		    	</CardText>
 			    <CardActions>	
-	      			<RaisedButton onClick={this.handleClick} label="Create" primary={true}/>
+	      			<Buttons handleClick={this.handleClick} label={this.state.buttonLabel} />
 	    		</CardActions>			    
 	    	</Card>    
     	</div>

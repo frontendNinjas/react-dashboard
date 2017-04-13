@@ -1,9 +1,19 @@
 import React from 'react';
-import TextField from 'material-ui/TextField';
+import Input from '../../src/components/Input';
 import {Card, CardActions, CardHeader, CardTitle, CardText} from 'material-ui/Card';
-import RaisedButton from 'material-ui/RaisedButton';
+import Buttons from '../../src/components/Buttons';
 
 class Login extends React.Component {
+ 
+ constructor(props) {
+    super(props);
+      this.state =({
+        title:"Login",
+        buttonLabel:"Submit",
+      	username:"Username",
+      	password:"password"
+      })
+  }
 
   handleClick() {
   		console.log('You have been successfully logged in...');
@@ -14,13 +24,13 @@ class Login extends React.Component {
     return (
     	<div className="login">
 	    	<Card>
-		    	<CardHeader title="Login"/>
+		    	<CardHeader title={this.state.title}/>
 		    	<CardText>
-		    	    <TextField hintText="@username" floatingLabelText="Username"/><br />
-		    	    <TextField hintText="@password" floatingLabelText="Password" type="password"/>
+                   <Input label={this.state.username} />
+                    <Input label={this.state.password} />
 		    	</CardText>
 			    <CardActions>	
-	      			<RaisedButton onClick={this.handleClick} label="Submit" primary={true}/>
+              <Buttons handleClick={this.handleClick} label={this.state.buttonLabel} />
 	    		</CardActions>			    
 	    	</Card>    
     	</div>

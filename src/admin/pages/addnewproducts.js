@@ -1,20 +1,25 @@
 import React from 'react';
 import Products from '../../../src/components/Products';
-import RaisedButton from 'material-ui/RaisedButton';
+import Buttons from '../../../src/components/Buttons';
 import {Link} from 'react-router';
 
-const style = {
-  margin: 12,
-};
-
-
 class addNewProducts extends React.Component{	
+
+  constructor(props) {
+  super(props)
+    this.state =({
+      title:"Add New Product",
+      buttonLabel:"All Products",
+    })
+}
+
+
   render(){
     return (
 		<div>
-		    <h3>Add New Product</h3>
+		    <h3>{this.state.title}</h3>
 		     <Link to="/admin/all-products">
-                <RaisedButton label="All Products" style={style} />
+              <Buttons label={this.state.buttonLabel} />
             </Link>
 		    <hr/>
             <Products/>

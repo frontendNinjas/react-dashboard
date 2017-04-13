@@ -1,21 +1,27 @@
 import React from 'react';
 import TableComponent from '../../../src/components/Table';
-import RaisedButton from 'material-ui/RaisedButton';
 import {Link} from 'react-router';
-
-const style = {
-  margin: 12,
-};
+import Buttons from '../../../src/components/Buttons';
 
 class userPageAdmin extends React.Component{	
+
+  constructor(props) {
+    super(props);
+      this.state =({
+        title:"Products",
+        buttonLabel:"Add new user"
+      })
+  }
+
   render(){
     return (
     	 <div>
     	  <h3>All User List</h3>
     	      	  <hr/>
     	    <Link to="/admin/add-new-users">
-                <RaisedButton label="Add New User" primary={true} style={style} />    
+                <Buttons label={this.state.buttonLabel} />     
             </Link>
+            <br/>
     	   <TableComponent />
     	 </div>
     )
