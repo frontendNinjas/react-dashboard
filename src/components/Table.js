@@ -1,9 +1,8 @@
 import React from 'react';
+import {Link} from 'react-router'
 import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table';
-import userData from '../api/userData'
 
 class TableComponent extends React.Component{	
-
 
   constructor(props) {
     super(props);
@@ -44,12 +43,13 @@ class TableComponent extends React.Component{
 	            showRowHover={this.state.showRowHover}
 	            stripedRows={this.state.stripedRows}
 			    >
-	            {userData.map( (row, index) => (
+	            {this.props.rowData.map( (row, index) => (
 	              <TableRow key={index} selected={row.selected}>
-	                <TableRowColumn>{index}</TableRowColumn>
-	                <TableRowColumn>{row.fullName}</TableRowColumn>
-	                <TableRowColumn>{row.username}</TableRowColumn>
-	                <TableRowColumn>{row.email}</TableRowColumn>
+	                <TableRowColumn key={row.username}>{index}</TableRowColumn>
+	                <TableRowColumn key={row.username}><Link to={'/admin/manage-user/' + row.username}>{row.fullName}</Link></TableRowColumn>
+	                <TableRowColumn key={row.username}>{row.username}</TableRowColumn>
+	                <TableRowColumn key={row.username}>{row.email}</TableRowColumn>
+                  <TableRowColumn key={row.username}><span id={row.username} onClick={this.props.deleteRow}>X</span></TableRowColumn>
 	              </TableRow>
 	              ))}
 		    </TableBody>

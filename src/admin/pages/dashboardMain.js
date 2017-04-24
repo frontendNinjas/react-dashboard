@@ -10,10 +10,6 @@ class dashboardMain extends React.Component{
       		<div className="col-md-4">
       	      <ToDoList />
       		</div>	
-          <div className="col-md-5">
-              <TableComponent />
-          </div>  
-          
 		</div>
     )
   }

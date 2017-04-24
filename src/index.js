@@ -4,9 +4,10 @@ import { Router,hashHistory} from 'react-router';
 import Routes from '../src/routes.js'
 import {Provider} from 'react-redux';
 import App from '../src/App.js'
+import {loadUsers} from '../src/actions/userActions'
 import configureStore from '../src/store/configureStore';
 const store = configureStore();
-
+store.dispatch(loadUsers());
 ReactDOM.render(
 	<Provider store={store}>
 		<Router history={hashHistory} routes={Routes} component={App}/>

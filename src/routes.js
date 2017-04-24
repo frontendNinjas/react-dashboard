@@ -4,7 +4,7 @@ import AppUser from '../src/AppUser.js'
 import AppAdmin from '../src/AppAdmin.js'
 import homePageAdmin from '../src/admin/pages/homePageAdmin';
 import securedPageAdmin from '../src/admin/pages/securedPageAdmin';
-import editUserPageAdmin from '../src/admin/pages/editUserPageAdmin';
+import manageUserPageAdmin from '../src/admin/pages/manageUserPageAdmin';
 import inventoryPageAdmin from '../src/admin/pages/inventoryPageAdmin';
 import productsPageAdmin from '../src/admin/pages/productsPageAdmin';
 import userPageAdmin from '../src/admin/pages/userPageAdmin';
@@ -28,7 +28,8 @@ export default(
 				<IndexRoute component={dashboardMain}/>
 				<Route path="/admin/register" component={registerPageAdmin}/>
 				<Route path="/admin/website-pages-admin" component={websitePagesAdmin}/>
-				<Route path="/admin/edit-page" component={editUserPageAdmin}/>
+				<Route path="/admin/manage-user" component={manageUserPageAdmin}/>
+				<Route path="/admin/manage-user/:id" component={manageUserPageAdmin}/>
 				<Route path="/admin/inventory" component={inventoryPageAdmin}/>
 				<Route path="/admin/all-products" component={productsPageAdmin}/>
 				<Route path="/admin/all-users" component={userPageAdmin}/>

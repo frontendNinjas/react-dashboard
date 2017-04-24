@@ -1,16 +1,25 @@
 import React from 'react';
-import TableComponent from '../../../src/components/Table';
 import {Link} from 'react-router';
+import {connect} from 'react-redux'
+import * as userActions from '../../../src/actions/userActions'
+import {bindActionCreators} from 'redux';
 import Buttons from '../../../src/components/Buttons';
+import TableComponent from '../../../src/components/Table';
+
 
 class userPageAdmin extends React.Component{	
 
-  constructor(props) {
+  constructor(props) {    
     super(props);
-      this.state =({
-        title:"Products",
-        buttonLabel:"Add new user"
-      })
+    this.deleteRow = this.deleteRow.bind(this);
+  }
+
+  deleteRow(event){
+    event.preventDefault();    
+    var userToDelete = this.props.users.filter(function(user){
+      return user.username == event.target.getAttribute('id'); 
+    })
+    this.props.actions.deleteUser(userToDelete[0].username);
   }
 
   render(){
@@ -18,14 +27,25 @@ class userPageAdmin extends React.Component{
     	 <div>
     	  <h3>All User List</h3>
     	      	  <hr/>
-    	    <Link to="/admin/add-new-users">
-                <Buttons label={this.state.buttonLabel} />     
+    	    <Link to="/admin/manage-user">
+                <Buttons label="add for now" />     
             </Link>
-            <br/>
-    	   <TableComponent />
+            <br/>          
+            <TableComponent rowData={this.props.users} deleteRow={this.deleteRow}/>
     	 </div>
     )
   }
 }
 
-export default userPageAdmin
+function mapStateToProps(state, ownProps){
+  return {
+    users: state.users
+  }
+}
+
+function mapDispatchToProps(dispatch){
+  return {
+    actions: bindActionCreators(userActions,dispatch)
+  }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(userPageAdmin);
