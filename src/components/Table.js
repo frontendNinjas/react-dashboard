@@ -45,11 +45,11 @@ class TableComponent extends React.Component{
 			    >
 	            {this.props.rowData.map( (row, index) => (
 	              <TableRow key={index} selected={row.selected}>
-	                <TableRowColumn key={row.username}>{index}</TableRowColumn>
-	                <TableRowColumn key={row.username}><Link to={'/admin/manage-user/' + row.username}>{row.fullName}</Link></TableRowColumn>
-	                <TableRowColumn key={row.username}>{row.username}</TableRowColumn>
-	                <TableRowColumn key={row.username}>{row.email}</TableRowColumn>
-                  <TableRowColumn key={row.username}><span id={row.username} onClick={this.props.deleteRow}>X</span></TableRowColumn>
+	                <TableRowColumn>{index}</TableRowColumn>
+	                <TableRowColumn><Link to={'/admin/manage-user/' + row.username}>{row.fullName}</Link></TableRowColumn>
+	                <TableRowColumn>{row.username}</TableRowColumn>
+	                <TableRowColumn>{row.email}</TableRowColumn>
+                  <TableRowColumn><span id={row.username} onClick={this.props.deleteRow}>X</span></TableRowColumn>
 	              </TableRow>
 	              ))}
 		    </TableBody>

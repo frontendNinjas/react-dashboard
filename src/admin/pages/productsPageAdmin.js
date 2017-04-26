@@ -1,5 +1,4 @@
 import React from 'react';
-import TableComponent from '../../../src/components/Table';
 import {Link} from 'react-router';
 import Buttons from '../../../src/components/Buttons';
 
@@ -22,7 +21,6 @@ class productsPageAdmin extends React.Component{
             <Buttons label={this.state.buttonLabel} />   
          </Link>
          <br/>
-	       <TableComponent />
     	</div>	
     )
   }

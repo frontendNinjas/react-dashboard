@@ -1,6 +1,5 @@
 import React from 'react';
 import ToDoList from '../../../src/components/ToDoList';
-import TableComponent from '../../../src/components/Table';
 
 class dashboardMain extends React.Component{	
   render(){
