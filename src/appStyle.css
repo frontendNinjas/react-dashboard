@@ -12,3 +12,7 @@ aside{
     z-index: 99;
     top: 10px;
 }
+
+.deleteIcon{
+	cursor: pointer;
+}

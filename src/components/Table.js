@@ -49,7 +49,7 @@ class TableComponent extends React.Component{
 	                <TableRowColumn><Link to={'/admin/manage-user/' + row.username}>{row.fullName}</Link></TableRowColumn>
 	                <TableRowColumn>{row.username}</TableRowColumn>
 	                <TableRowColumn>{row.email}</TableRowColumn>
-                  <TableRowColumn><span id={row.username} onClick={this.props.deleteRow}>X</span></TableRowColumn>
+                  <TableRowColumn><span id={row.username} onClick={this.props.deleteRow} className="deleteIcon">X</span></TableRowColumn>
 	              </TableRow>
 	              ))}
 		    </TableBody>
