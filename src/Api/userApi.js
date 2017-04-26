@@ -36,13 +36,12 @@ var userApi = {
 		})
 	},
 	deleteUser(userId){
-		console.log('userId', userId)
 			return new Promise((resolve, reject) => {
-			setTimeout(()=>{
-				var users = _remove(userData, function(n){
-					return n.username != userId
+				setTimeout(()=>{
+					var users = _remove(userData, function(n){
+						return n.username == userId
 				});
-				resolve(users);
+				resolve(userData);
 			},delay);
 		})
 	}

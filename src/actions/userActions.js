@@ -38,7 +38,6 @@ export function saveUser(user){
 export function deleteUser(username){
 	return function(dispatch){
 		return userApi.deleteUser(username).then(deletedUser => {
-			console.log('deletedUser', deletedUser)
 			dispatch(loadUsersAfterDeleteSuccess(deletedUser));
 		}).catch(error => {
 			throw(error);
