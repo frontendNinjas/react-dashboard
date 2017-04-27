@@ -1,5 +1,4 @@
 export default function userReducer(state=[], action){
-	var count = [0];
 	switch(action.type){
 		case 'LOAD_USERS_SUCCESS': 
 			return action.users;
