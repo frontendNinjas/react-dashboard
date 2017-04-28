@@ -3,38 +3,40 @@ import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux';
 import ToDoList from '../../../src/components/ToDoList';
 import * as toDoListActions from '../../../src/actions/toDoListActions'
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Row, Col } from 'react-flexbox-grid';
 
 class dashboardMain extends React.Component{  
 
   constructor(props) {
     super(props);
-    this.editClick = this.editClick.bind(this);
+    this.onCheckboxChange = this.onCheckboxChange.bind(this);
     this.deleteClick = this.deleteClick.bind(this);
-  }
-
-  editClick(){
-    console.log('edit click')
   }
 
   deleteClick(){
     console.log('delete click')
   }
 
+  onCheckboxChange(){
+    console.log('onCheckboxChange click')
+    
+  }
+
   render(){
     return (
        <div>
-        <h3>Dashboard</h3>
-          <div className="col-md-4">
-              <ToDoList editClick={this.editClick} deleteClick={this.deleteClick} toDoLists={this.props.toDoLists} />
-          </div> 
-        <Grid fluid>
-        <Row>
-          <Col xs={6} md={3}>
-            Hello, world!
-          </Col>
-        </Row>
-      </Grid>
+       <h3>Dashboard</h3>
+       <Row>
+        <Col xs={12} sm={12} lg={4}>
+          <ToDoList onCheckboxChange={this.onCheckboxChange} deleteClick={this.deleteClick} toDoLists={this.props.toDoLists} />
+        </Col>
+        <Col xs={12} sm={12} lg={4}>
+          level1
+        </Col>
+        <Col xs={12} sm={12} lg={4}>
+          level2
+        </Col>
+      </Row>      
        </div>
     )
   }
