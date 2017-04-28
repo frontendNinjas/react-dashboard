@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux';
 import ToDoList from '../../../src/components/ToDoList';
 import * as toDoListActions from '../../../src/actions/toDoListActions'
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 class dashboardMain extends React.Component{  
 
@@ -26,7 +27,14 @@ class dashboardMain extends React.Component{
         <h3>Dashboard</h3>
           <div className="col-md-4">
               <ToDoList editClick={this.editClick} deleteClick={this.deleteClick} toDoLists={this.props.toDoLists} />
-          </div>       
+          </div> 
+        <Grid fluid>
+        <Row>
+          <Col xs={6} md={3}>
+            Hello, world!
+          </Col>
+        </Row>
+      </Grid>
        </div>
     )
   }

@@ -27,6 +27,11 @@ module.exports = {
         loader: "style-loader!css-loader"
       },
       {
+        test: /\.css$/,
+        include: /flexboxgrid/,
+        loader: "style-loader!css-loader"
+      },      
+      {
         test: /\.(png|jpg|ttf|eot)$/, 
         include: path.join(__dirname,'src'),
         loader: 'url-loader?limit=10000'
