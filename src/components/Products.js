@@ -1,50 +1,28 @@
-import React from 'react'
-import {Link} from 'react-router'
-import {connect} from 'react-redux'
-import * as productActions from '../../src/actions/productActions'
-import {bindActionCreators} from 'redux';
+import React from 'react';
+import {Link} from 'react-router';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 class Products extends React.Component{
-	constructor(props,context) {
-		super(props,context);
-		
-		this.state = {
-			product: {title: ''}
-		}
-		this.onProductChange = this.onProductChange.bind(this)
-		this.onClickSave = this.onClickSave.bind(this)
-	}
-	onProductChange(event){
-		const product = this.state.product;
-		product.title = event.target.value;
-		this.setState({product: product});
-	}
-	onClickSave(){
-		this.props.actions.createProduct(this.state.product);
-	}
-	productRow(product, index){
-		return <div key={index}>{product.title}</div>
-	}
 	render(){
 		return(
-			<div>
-				{this.props.products.map(this.productRow)}
-				<input type="text" onChange={this.onProductChange} value={this.state.product.title} />
-				<input type="submit" value="Save" onClick={this.onClickSave} />				
-			</div>
+         <Grid>
+					  {this.props.productRow.map((row, index) => (
+              <Row key={index}>
+               <Col xs={2}>
+                 <img src={row.image} />
+               </Col>
+               <Col xs={8}>
+                 <div>{row.title}</div>
+                 <div>Price: {row.price}</div>
+                 <div>SKU: {row.sku}</div>
+                 <div>Description: {row.bodyHtml}</div>
+               </Col>
+              </Row>
+					  ))}
+          </Grid>
 		)
 	}
 }
 
-function mapStateToProps(state, ownProps){
-	return {
-		products: state.products
-	}
-}
 
-function mapDispatchToProps(dispatch){
-	return {
-		actions: bindActionCreators(productActions,dispatch)
-	}
-}
-export default connect(mapStateToProps, mapDispatchToProps)(Products);
+export default Products
