@@ -8,14 +8,22 @@ import Products from '../../../src/components/Products';
 
 class productsPageAdmin extends React.Component{	
 
-   constructor(props) {
+ constructor(props) {
     super(props);
+      this.state =({
+        buttonLabel:"Add Product",
+      })
   }
 
   render(){
     return (
 		 <div>
        <h3>All Products List</h3>
+       <hr/>
+         <Link to="/admin/manage-user">
+          <Buttons label={this.state.buttonLabel} />     
+          </Link>
+            <br/> 
        <Products productRow={this.props.products} />
     	</div>	
     )

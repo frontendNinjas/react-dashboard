@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 
 class Products extends React.Component{
@@ -8,7 +7,7 @@ class Products extends React.Component{
          <Grid>
 					  {this.props.productRow.map((row, index) => (
               <Row key={index}>
-               <Col xs={2}>
+               <Col xs={3}>
                  <img src={row.image} />
                </Col>
                <Col xs={8}>
