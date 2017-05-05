@@ -1,31 +1,23 @@
 import React from 'react';
-import Products from '../../../src/components/Products';
-import Buttons from '../../../src/components/Buttons';
 import {Link} from 'react-router';
+import Input from '../../../src/components/Input';
+import Checkbox from 'material-ui/Checkbox';
+import {List, ListItem} from 'material-ui/List';
+import Buttons from '../../../src/components/Buttons';
+import ProductForm from '../../../src/components/ProductForm'
 
-class addNewProducts extends React.Component{	
+const style = {
+	margin: 12,
+};
 
-  constructor(props) {
-  super(props)
-    this.state =({
-      title:"Add New Product",
-      buttonLabel:"All Products",
-    })
-}
-
-
-  render(){
-    return (
+class addNewUserPageAdmin extends React.Component{  
+	render(){
+		return (
 		<div>
-		    <h3>{this.state.title}</h3>
-		     <Link to="/admin/all-products">
-              <Buttons label={this.state.buttonLabel} />
-            </Link>
-		    <hr/>
-            <Products/>
-		</div>	
-    )
-  }
+      <ProductForm />
+		</div>  
+		)
+	}
 }
 
-export default addNewProducts
+export default addNewUserPageAdmin

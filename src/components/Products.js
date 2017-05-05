@@ -13,7 +13,7 @@ class Products extends React.Component{
                <Col xs={8}>
                  <div>{row.title}</div>
                  <div>Price: {row.price}</div>
-                 <div>SKU: {row.sku}</div>
+                 <br />
                  <div>Description: {row.bodyHtml}</div>
                </Col>
               </Row>

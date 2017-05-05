@@ -1,20 +1,17 @@
 var productsData =[
   {
-    title: "Lets Taco Bout It Baby Romper",
-    bodyHtml: "Unisex Baby Romper Short Sleeve Free Shipping! Please Allow 2-4 weeks for delivery.",
-    sku: "001a",
+    title: "Material-UI",
+    bodyHtml: "Material-UI is a set of React components that implement Google's Material Design specification.",
     price:"$9.99",
     image:"../../src/images/products/1.png"
   },{
-    title: "Newborn Outfit, Baby Boy Clothes, Mommy's Little Man",
-    bodyHtml: "Super cute Mommy's Little Man bodysuit is perfect for Mother's Day! Makes the cutest photoshoot outfit or take a pic for Instagram or Facebook.",
-    sku: "002b",
+    title: " React ",
+    bodyHtml: "React makes it painless to create interactive UIs, declarative, efficient, and flexible JavaScript library for building user interfaces. ... Your components tell React what you want to render – then React will efficiently update and render just the right components when your data changes. Here, ShoppingList is a React component class, or React component type.",
     price:"$20.89",
     image:"../../src/images/products/2.png"
   },{
-    title: "Born to Move Mountains Shirt,Christian Onesie",
-    bodyHtml: "Born to Move Mountains is in a charcoal color and pairs perfectly with leggings or jeans. If you prefer a different color please convo me for a list of available colors!",
-    sku: "003c",
+    title: "Redux ",
+    bodyHtml: "Redux it is a tool for managing both data-state and UI-state in JavaScript applications is a predictable state container for JavaScript apps. (If you're looking for a WordPress framework, check out Redux Framework.)",
     price:"$22.19",
     image:"../../src/images/products/3.png"
   }

@@ -20,7 +20,7 @@ class productsPageAdmin extends React.Component{
 		 <div>
        <h3>All Products List</h3>
        <hr/>
-         <Link to="/admin/manage-user">
+         <Link to="/admin/add-new-products">
           <Buttons label={this.state.buttonLabel} />     
           </Link>
             <br/> 
