@@ -3,17 +3,20 @@ import {Link} from 'react-router';
 import {connect} from 'react-redux';
 import * as productActions from '../../../src/actions/productActions';
 import {bindActionCreators} from 'redux';
-import Buttons from '../../../src/components/Buttons';
+import RaisedButton from 'material-ui/RaisedButton';
 import Products from '../../../src/components/Products';
 
 class productsPageAdmin extends React.Component{	
 
  constructor(props) {
     super(props);
-      this.state =({
-        buttonLabel:"Add Product",
-      })
+    this.deleteProduct = this.deleteProduct.bind(this);
   }
+
+   deleteProduct(event){
+     console.log("delete")
+  }
+
 
   render(){
     return (
@@ -21,10 +24,10 @@ class productsPageAdmin extends React.Component{
        <h3>All Products List</h3>
        <hr/>
          <Link to="/admin/add-new-products">
-          <Buttons label={this.state.buttonLabel} />     
+           <RaisedButton label="Add Product" primary={true} />    
           </Link>
-            <br/> 
-       <Products productRow={this.props.products} />
+            <br/>  <br/> 
+       <Products productRow={this.props.products} deleteProduct={this.deleteProduct} />
     	</div>	
     )
   }
