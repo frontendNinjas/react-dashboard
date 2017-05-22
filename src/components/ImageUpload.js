@@ -2,10 +2,6 @@ import React from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
 
 const styles = {
-  imgPreview: {
-	  height: 298,
-	  width: 227
-  },
   imgPreviewDiv:{
     top:10,
     position: 'relative',
