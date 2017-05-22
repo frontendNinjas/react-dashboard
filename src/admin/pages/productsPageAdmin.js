@@ -10,11 +10,16 @@ class productsPageAdmin extends React.Component{
 
  constructor(props) {
     super(props);
-    this.deleteProduct = this.deleteProduct.bind(this);
+    this.deleteProductRow = this.deleteProductRow.bind(this);
   }
 
-   deleteProduct(event){
-     console.log("delete")
+  deleteProductRow(event){
+    console.log("product page admin 1");
+    event.preventDefault();    
+    var productToDelete = this.props.products.filter(function(product){
+      return product.productid == event.target.getAttribute('id'); 
+    })
+    this.props.actions.deleteProduct(productToDelete[0].productid);
   }
 
 
@@ -27,7 +32,7 @@ class productsPageAdmin extends React.Component{
            <RaisedButton label="Add Product" primary={true} />    
           </Link>
             <br/>  <br/> 
-       <Products productRow={this.props.products} deleteProduct={this.deleteProduct} />
+       <Products productRow={this.props.products} deleteProductRow={this.deleteProductRow} />
     	</div>	
     )
   }

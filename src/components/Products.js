@@ -8,17 +8,17 @@ class Products extends React.Component{
          <Grid>
 					  {this.props.productRow.map((row, index) => (
               <Row key={index}>
-               <Col xs={3}>
+               <Col xs={2}>
                  <img src={row.image} />
                </Col>
-               <Col xs={7}>
-                 <div>{row.title}</div>
+               <Col xs={8}>
+                 <div>{row.productname}</div>
                  <div>Price: {row.price}</div>
                  <br />
                  <div>Description: {row.bodyHtml}</div>
                </Col>
-                <Col xs={2}>
-                 <RaisedButton onClick={this.props.deleteProduct} label="Remove Product" primary={true} />
+                <Col xs={1}>
+                 <div id={row.productid} className="deleteIcon" onClick={this.props.deleteProductRow}>X</div>
                </Col>
               </Row>
 					  ))}

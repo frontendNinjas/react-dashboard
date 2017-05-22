@@ -29,13 +29,13 @@ class ImageUpload extends React.Component{
     this.state = {file: '',imagePreviewUrl: ''};
   }
 
-    _handleSubmit(e) {
+  handleSubmit(e) {
     e.preventDefault();
     // TODO: do something with -> this.state.file
     console.log('handle uploading-', this.state.file);
   }
 
-  _handleImageChange(e) {
+  handleImageChange(e) {
     e.preventDefault();
 
     let reader = new FileReader();
@@ -63,16 +63,16 @@ class ImageUpload extends React.Component{
 
     return (
       <div>
-        <form onSubmit={(e)=>this._handleSubmit(e)}>
+        <form onSubmit={(e)=>this.handleSubmit(e)}>
 	    <RaisedButton
 	      label="Choose an Image"
 	      labelPosition="before"
 	      secondary={true}
 	      containerElement="label"
 	    >
-	      <input className="fileInput" style={styles.uploadInput} type="file" onChange={(e)=>this._handleImageChange(e)} />
+	      <input className="fileInput" style={styles.uploadInput} type="file" onChange={(e)=>this.handleImageChange(e)} />
 	    </RaisedButton>
-          <RaisedButton label="Upload" type="submit" onClick={(e)=>this._handleSubmit(e)} />
+          <RaisedButton label="Upload" type="submit" onClick={(e)=>this.handleSubmit(e)} />
         </form>
         <div style={styles.imgPreviewDiv}>
           {$imagePreview}
