@@ -13,7 +13,7 @@ a{
     
 }
 .container{
-	margin:0 !important;
+	margin:0 auto !important;
 }
 .footer {
 	 height: 48px;
@@ -79,11 +79,11 @@ header {
 .col-md-5{
     width:95%;
 }
-img{
+.productImages{
     width: 180px;
     height: 113px;
 }
-.row{
+.productsRow{
     padding: 36px 0;
     border-bottom: 1px dotted #ccc;
 }

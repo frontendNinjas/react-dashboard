@@ -7,9 +7,9 @@ class Products extends React.Component{
 		return(
          <Grid>
 					  {this.props.productRow.map((row, index) => (
-              <Row key={index}>
+              <Row key={index} className="productsRow">
                <Col xs={2}>
-                 <img src={row.image} />
+                 <img className="productImages" src={row.image} />
                </Col>
                <Col xs={8}>
                  <div>{row.productname}</div>
