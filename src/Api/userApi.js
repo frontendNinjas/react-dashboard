@@ -24,11 +24,12 @@ var userApi = {
 	saveUser(user){
 		return new Promise((resolve, reject) => {
 			setTimeout(()=>{
-				if(_find(userData,{username: user.userId})){
-					var existingUserIndex = _indexOf(userData, _find(userData, {id: user.userId})); 
+				if(_find(userData,{username: user.username})){
+					var existingUserIndex = _indexOf(userData, _find(userData, {username: user.username})); 
 					userData.splice(existingUserIndex, 1, user);			
 
 				}else{
+					user.username = user.email;
 					userData.push(user);
 				}
 				resolve(_clone(user))

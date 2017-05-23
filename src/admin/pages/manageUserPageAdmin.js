@@ -20,10 +20,12 @@ class manageUserPageAdmin extends React.Component{
   	const field = event.target.name;
   	let user = this.state.user;
   	user[field] = event.target.value;
+    console.log('this.state.user', this.state.user)
   	return this.setState({user:user});
   }
 
   saveUser(event){
+    console.log('this.state.user', this.state.user)
   	event.preventDefault();
   	this.props.actions.saveUser(this.state.user)
   	this.context.router.push('/admin/all-users');
@@ -50,7 +52,6 @@ function getUserByUsername(users,username){
 
 function mapStateToProps(state, ownProps){
 	let user = {
-		username: '',
 		password: '',
 		firstName: '',
 		lastName: '',

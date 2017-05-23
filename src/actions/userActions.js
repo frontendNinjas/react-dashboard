@@ -27,9 +27,14 @@ export function loadUsers(users){
 	}
 }
 export function saveUser(user){
+	console.log('user', user)
+	var newUserDetails = user
 	return function(dispatch){
-		return userApi.saveUser(user).then(savedUser => {
-			user.username ? dispatch(updateUsersSuccess(savedUser)) : dispatch(createUsersSuccess(savedUser));
+		return userApi.saveUser(user).then(savedUser => {  	
+			console.log('newUserDetails', newUserDetails)		
+			console.log('savedUser', savedUser)		
+				console.log('user', user)
+			newUserDetails.username ? dispatch(updateUsersSuccess(savedUser)) : dispatch(createUsersSuccess(savedUser));
 		}).catch(error => {
 			throw(error);
 		})

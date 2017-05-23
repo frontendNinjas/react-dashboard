@@ -16,7 +16,6 @@ constructor(props) {
     this.state =({
     	title:"Add New User",
       buttonLabel:"Create",
-    	username:"username",
     	firstname:"First Name",
     	lastname:"Last Name",
     	emailaddress:"Email Address",
