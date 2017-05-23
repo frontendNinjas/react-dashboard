@@ -6,14 +6,14 @@ import homePageAdmin from '../src/admin/pages/homePageAdmin';
 import securedPageAdmin from '../src/admin/pages/securedPageAdmin';
 import manageUserPageAdmin from '../src/admin/pages/manageUserPageAdmin';
 import inventoryPageAdmin from '../src/admin/pages/inventoryPageAdmin';
-import productsPageAdmin from '../src/admin/pages/productsPageAdmin';
+import productsPageAdmin from '../src/admin/pages/products/productsPageAdmin';
 import userPageAdmin from '../src/admin/pages/userPageAdmin';
 import homePageUser from '../src/user/pages/homePageUser';
 import registerPageAdmin from '../src/admin/pages/registerPageAdmin';
 import websitePagesAdmin from '../src/admin/pages/websitePagesAdmin';
 import themes from '../src/admin/pages/themes';
 import addNewUserPageAdmin from '../src/admin/pages/addNewUserPageAdmin';
-import addNewProducts from '../src/admin/pages/addNewProducts';
+import addNewProducts from '../src/admin/pages/products/addNewProducts';
 import dashboardMain from '../src/admin/pages/dashboardMain';
 
 export default(
@@ -36,6 +36,7 @@ export default(
 				<Route path="/admin/add-new-users" component={addNewUserPageAdmin}/>
 				<Route path="/admin/themes" component={themes}/>
 				<Route path="/admin/add-new-products" component={addNewProducts}/>
+				<Route path="/admin/add-new-products/:id" component={addNewProducts}/>
 			</Route> 			
         </Route>  
     )
