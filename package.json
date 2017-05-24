@@ -32,6 +32,7 @@
     "webpack-dev-server": "^2.4.2"
   },
   "scripts": {
-    "start": "webpack-dev-server --inline"
+    "start": "webpack-dev-server --inline",
+    "test": "react-scripts test --env=jsdom"
   }
 }
