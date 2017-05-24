@@ -5,7 +5,7 @@ import * as userActions from '../../../src/actions/userActions'
 import {bindActionCreators} from 'redux';
 import Buttons from '../../../src/components/Buttons';
 import TableComponent from '../../../src/components/Table';
-
+import UsersPageAdmin from '../pages/users/usersPageAdmin'
 
 class userPageAdmin extends React.Component{	
 
@@ -23,8 +23,9 @@ class userPageAdmin extends React.Component{
   }
 
   render(){
-    return (
+    return (     
     	 <div>
+        <UsersPageAdmin/>
     	  <h3>All User List</h3>
     	      	  <hr/>
     	    <Link to="/admin/manage-user">
