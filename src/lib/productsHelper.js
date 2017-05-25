@@ -1,0 +1,1 @@
+export const addProducts = (list,newProducts) => [...list, newProducts]
