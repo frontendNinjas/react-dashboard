@@ -3,7 +3,8 @@ export default function productReducer(state = [], action) {
 				case 'LOAD_PRODUCTS_SUCCESS':
 						return action.products;
 				case 'CREATE_PRODUCTS_SUCCESS':
-						return Object.assign([], action.products);
+				        console.log("action.product ", action.product);
+						return [...state, Object.assign({},action.products)]
 				case 'UPDATE_PRODUCTS_SUCCESS':
 						const updatedProducts = Object.assign([], state)
 						const indexOfProductsUpdate = state.findIndex( x =>
@@ -11,7 +12,7 @@ export default function productReducer(state = [], action) {
 							);
 						updatedProducts[indexOfProductsUpdate] = action.products
 						return updatedProducts;
-				case 'LOAD_PRODUCTS_AFTER_DELETE_SUCCESS':
+				case 'DELETE_PRODUCTS_SUCCESS':
 						const newState = Object.assign([], state);
 						const indexOfProductsToDelete = state.findIndex(products => {
 								return action.products

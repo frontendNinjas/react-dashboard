@@ -8,7 +8,7 @@ import {List, ListItem} from 'material-ui/List';
 import Buttons from '../../../../src/components/Buttons';
 import ProductForm from '../../../../src/components/ProductForm'
 import * as productActions from '../../../../src/actions/productActions'
-
+ 
 const style = {
 	margin: 12,
 };
@@ -36,7 +36,7 @@ class addNewProducts extends React.Component{
     event.preventDefault();
   	this.props.actions.saveProduct(this.state.products);
   	this.context.router.push('/admin/all-products');
-  }
+  } 
 
 	render(){
 		return (
