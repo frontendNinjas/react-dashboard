@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {TableHeaderCustom} from '../table/index'
-
 import {
   Table,
   TableBody,
@@ -13,10 +12,8 @@ import {
 export class TableCustom extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-
-    }
   }
+
   render() {
     let header
     if (this.props.headerItems.length > 0) {
@@ -34,7 +31,7 @@ export class TableCustom extends Component {
         <TableBody>
           {this.props.data.map((d,index) => {
             return(   
-                React.cloneElement(this.props.children,{rowdata:d,key:index}) 
+                React.cloneElement(this.props.children,{rowdata:d,key:index,delete:this.props.deleteUser,userForUpdate:this.props.userForUpdate})
            )
           })}
           
