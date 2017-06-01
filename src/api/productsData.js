@@ -1,22 +1,31 @@
-var productsData =[
+var productsData = [
   {
-    productid:"1",
-    productname: "Material-UI",
-    bodyHtml: "Material-UI is a set of React components that implement Google's Material Design specification.",
-    price:"$9.99",
-    image:"../../src/images/products/1.png"
+    productid: "1",
+    productname: "PDF Paper Flower Template DIGITAL Version with Base ",
+    bodyHtml: "Digital (PDF) paper flower template with base. Perfect for your DIY flower proje" +
+        "ct. Beautiful flowers on the way.",
+    price: "$5.99",
+    image: "../../src/images/products/1.png"
+  }, {
+    productid: "2",
+    productname: "Matte Basic Color-Leather edge paint Section ",
+    bodyHtml: "Leather edge paint Section Lacquers offers a pleasing finish to the edges of han" +
+        "dbags, belts and leather goods in general, look. ",
+    price: "$20.89",
+    image: "../../src/images/products/2.png"
+  }, {
+    productid: "3",
+    productname: "Peg Family Kit * Peg Doll * Family of 6 * Craft Kit",
+    bodyHtml: "Let your imagination run wild with this Peg Family Kit! Your kit contains 6 fami" +
+        "ly members that can be uniquely dressed and personalised by",
+    price: "$22.74",
+    image: "../../src/images/products/3.png"
   },{
-    productid:"2",
-    productname: "React",
-    bodyHtml: "React makes it painless to create interactive UIs, declarative, efficient, and flexible JavaScript library for building user interfaces. ... Your components tell React what you want to render – then React will efficiently update and render just the right components when your data changes. Here, ShoppingList is a React component class, or React component type.",
-    price:"$20.89",
-    image:"../../src/images/products/2.png"
-  },{
-            productid:"3",
-            productname: "Redux",
-            bodyHtml: "Redux it is a tool for managing both data-state and UI-state in JavaScript applications is a predictable state container for JavaScript apps. (If you're looking for a WordPress framework, check out Redux Framework.)",
-            price:"$22.19",
-            image:"../../src/images/products/3.png"
+    productid: "4",
+    productname: "E- book, Original tutorial,Colorful crafts",
+    bodyHtml:"This tutorial will show you how to make beautiful colorful polymer clay jewelry. A lot of tips, tricks and ideas inside.",
+    price: "$25.47",
+    image: "../../src/images/products/4.png"
   }
 ];
 

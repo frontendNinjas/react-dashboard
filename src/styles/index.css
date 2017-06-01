@@ -48,14 +48,30 @@ header {
 	height: 44px
 }
 .sidebar-wrapper{
-    width: 250px;
-    background-color: #00BCD4;
-    height: 990px;
+    width: 250px; 
     z-index: 1000;
     position: fixed;
 }
-.whiteColor {
-    color: #fff !important
+.blue {
+  background-color: #00BCD4;
+  height: 990px;
+  color: #fff
+}
+
+.lime{
+    background-color :#cddc39;
+    height: 990px;
+    color: #5c4806 !important
+}
+.purple{
+    background-color :#673AB7;
+    height: 990px;
+    color: #5c4806 !important
+}
+.green{
+    background-color :#8BC24A;
+    height: 990px;
+    color: #5c4806 !important
 }
 .page-content-wrapper{
     margin-left: 286px;
@@ -80,10 +96,10 @@ header {
     width:95%;
 }
 .productImages{
-    width: 180px;
-    height: 113px;
+    width: 323px;
+    height: 255px;
 }
-.productsRow{
-    padding: 36px 0;
-    border-bottom: 1px dotted #ccc;
+
+.themeColorList li{
+list-style: none
 }

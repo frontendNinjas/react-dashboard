@@ -35,11 +35,10 @@ export function saveProduct(products) {
   return function (dispatch) {
     return productsApi
       .saveProduct(products).then(savedProducts => {
-        debugger;
         console.log("new", newProductDetails);
         console.log("save", savedProducts);
         console.log("updateProductsSuccess", updateProductsSuccess(savedProducts));
-        console.log("createProductsSuccess", createProductsSuccess(savedProducts));       
+        console.log("createProductsSuccess", createProductsSuccess(savedProducts));        
         newProductDetails.productname ? dispatch(updateProductsSuccess(savedProducts)) : dispatch(createProductsSuccess(savedProducts));
       })
       .catch(error => {

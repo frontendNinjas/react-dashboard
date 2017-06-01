@@ -5,6 +5,7 @@ import * as productActions from '../../../../src/actions/productActions';
 import {bindActionCreators} from 'redux';
 import RaisedButton from 'material-ui/RaisedButton';
 import Products from '../../../../src/components/Products';
+import {Grid, Row, Col} from 'react-flexbox-grid';
 
 class productsPageAdmin extends React.Component {
 
@@ -34,18 +35,17 @@ class productsPageAdmin extends React.Component {
 
   render() {
     return (
-      <div>
-        <h3>All Products List</h3>
-        <hr/>
-        <Link to="/admin/add-new-products">
-          <RaisedButton label="Add Product" primary={true}/>
-        </Link>
-        <br/>
-        <br/>
+      <Row>
+        <Col><h3>All Products List</h3> </Col>
+         <Col>
+
+        </Col>
+         <Col>
         <Products
           productRow={this.props.products}
           deleteProductRow={this.deleteProductRow}/>
-      </div>
+         </Col>
+      </Row>
     )
   }
 }
