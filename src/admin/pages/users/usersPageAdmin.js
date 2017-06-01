@@ -125,7 +125,7 @@ class UsersPageAdmin extends Component {
         return (
             <div>
                 <RaisedButton label="Add / Edit User" onTouchTap={this.handleOpen}/>
-                <hr/>
+                <p>Click on the Full Name to edit individual record of the user</p>
                 <Dialog
                     title="Manage User"
                     actions={actions}
@@ -141,7 +141,8 @@ class UsersPageAdmin extends Component {
                     headerItems={this.state.header}
                     data={this.props.users}
                     userForUpdate={this.userForUpdate}
-                    deleteUser={this.deleteUser}>
+                    deleteUser={this.deleteUser}
+                    >
                     <UserTableRow/>
                 </TableCustom>
             </div>
