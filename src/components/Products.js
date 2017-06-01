@@ -27,8 +27,6 @@ class Products extends React.Component {
                 </CardMedia>
                 <CardText>Description: {row.bodyHtml}</CardText>
                 <CardHeader>
-
-
                   <Link to="/admin/add-new-products">
                       <RaisedButton label="Add" primary={true}/>
                       <RaisedButton label="Edit" secondary={true}/>

@@ -38,9 +38,6 @@ class productsPageAdmin extends React.Component {
       <Row>
         <Col><h3>All Products List</h3> </Col>
          <Col>
-
-        </Col>
-         <Col>
         <Products
           productRow={this.props.products}
           deleteProductRow={this.deleteProductRow}/>
