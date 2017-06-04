@@ -103,3 +103,8 @@ header {
 .themeColorList li{
 list-style: none
 }
+
+.userTable{
+    color: deeppink;
+    font-weight: bold;
+}

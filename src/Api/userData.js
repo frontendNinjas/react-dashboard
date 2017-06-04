@@ -1,27 +1,27 @@
 var userData = [
 				{
-								username: 'harru',
+								username: 'harminder.kaur@yahoo.com.au',
 								password: 'letmein',
 								firstName: 'harminder',
 								lastName: 'kaur',
 								fullName: 'Harminder Kaur',
 								email: 'harminder.kaur@yahoo.com.au'
 				}, {
-								username: 'pooji',
+								username: 'pooja.sharma@hotmail.com',
 								password: 'aloha',
 								firstName: 'Pooja',
 								lastName: 'Sharma',
 								fullName: 'Pooja Sharma',
 								email: 'pooja.sharma@hotmail.com'
 				}, {
-								username: 'vini',
+								username: 'vinita.chawla@gmail.com',
 								password: '5min',
 								firstName: 'Vanita',
 								lastName: 'chawla',
 								fullName: 'Vinita Chawla',
 								email: 'vinita.chawla@gmail.com'
 				}, {
-								username: 'test',
+								username: 'frontend.ninjas@gmail.com',
 								password: 'password',
 								firstName: 'frontend',
 								lastName: 'ninjas',
