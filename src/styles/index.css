@@ -59,17 +59,17 @@ header {
 }
 
 .lime{
-    background-color :#cddc39;
+    background-color :#CDDC39;
     height: 990px;
     color: #5c4806 !important
 }
 .purple{
-    background-color :#673AB7;
+    background-color :#7E57C2;
     height: 990px;
     color: #5c4806 !important
 }
-.green{
-    background-color :#8BC24A;
+.teal{
+    background-color :#00796B;
     height: 990px;
     color: #5c4806 !important
 }
@@ -99,6 +99,10 @@ header {
     width: 323px;
     height: 255px;
 }
+.themeColorList{
+  width: 100%;
+  display: inline-flex
+}
 
 .themeColorList li{
 list-style: none
@@ -107,4 +111,7 @@ list-style: none
 .userTable{
     color: deeppink;
     font-weight: bold;
+}
+.cursor{
+    cursor: pointer
 }

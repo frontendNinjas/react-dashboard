@@ -10,20 +10,39 @@ import {
 import {Grid, Row, Col} from 'react-flexbox-grid';
 
 const style = {
-	margin: 12,
+  margin: 12,
+  width:360
 };
 
-const ThemeList = (props) => {
-  return (
-    <Card style={style}>
-      <li>
-        <CardMedia
-          overlay={< CardTitle title = {props.detail.name} subtitle = "Click here to apply" />}>
-           <img className="themeImages" src={props.detail.sample}/>
-        </CardMedia>
-      </li>
-    </Card>
-  )
+class ThemeList extends React.Component {
+  render() {
+    return (
+      <Row>
+        <ul className="themeColorList">
+          {this
+            .props
+            .colorLists
+            .map((colorList, index) => {
+              return <Card style={style} key={colorList.colorTxt}>
+                <li
+                  className="cursor"
+                  id={colorList.colorClass}
+                  onClick={this.props.handleClick}>
+                  <CardMedia
+                    overlay={< CardTitle title = {
+                    colorList.colorTxt
+                  } />}>
+                    <img className="themeImages" src={colorList.sample}/>
+                  </CardMedia>
+                </li>
+              </Card>
+
+            })
+           }
+        </ul>
+      </Row>
+    )
+  }
 }
 
 export default ThemeList

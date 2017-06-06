@@ -3,36 +3,30 @@ import LeftSidebar from '../../../src/components/LeftSidebar';
 import DashboardHeaderAdmin from '../../../src/admin/pages/dashboardHeaderAdmin';
 import RightContainer from '../../../src/components/RightContainer';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import themes from '../../../src/admin/pages/themes/themes';
 
-class securedPageAdmin extends React.Component{	
+class securedPageAdmin extends React.Component {
 
   constructor(props) {
     super(props)
-    this.state = ({color: 'lime'})
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick(e) {
-    if (this.state.color === 'lime'){
-         this.setState({color: 'blue'})
-    } else {
-        this.setState({color: 'lime'})
+    this.state = {
+      colorLists: 'blue'
     }
+    // this.props.actions.updatedThemes();
   }
-
-  render(){
+  render() {
     return (
-     <div>
-        <MuiThemeProvider> 
-         <DashboardHeaderAdmin />    
-        </MuiThemeProvider> 
-        <MuiThemeProvider> 
-          <LeftSidebar color={this.state.color} />
-        </MuiThemeProvider>  
-        <MuiThemeProvider>    
-          <RightContainer body={this.props.children} handleClick={this.handleClick}/>
-        </MuiThemeProvider>   
-     </div>	
+      <div>
+        <MuiThemeProvider>
+          <DashboardHeaderAdmin/>
+        </MuiThemeProvider>
+        <MuiThemeProvider>
+          <LeftSidebar themeClass={this.state.colorLists}/>
+        </MuiThemeProvider>
+        <MuiThemeProvider>
+          <RightContainer body={this.props.children}/>
+        </MuiThemeProvider>
+      </div>
     )
   }
 }

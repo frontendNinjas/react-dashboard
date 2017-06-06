@@ -3,6 +3,7 @@ import LeftSidebar from '../../../../src/components/LeftSidebar'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import ThemeList from '../../../../src/components/ThemesList';
 import {Grid, Row, Col} from 'react-flexbox-grid';
+import securedPageAdmin from '../../../../src/admin/pages/securedPageAdmin';
 
 const styles = {
   block: {
@@ -20,35 +21,39 @@ class themes extends React.Component {
     this.state = {
       colorLists: [
         {
-          name: 'Lime',
-          sample: '../../src/images/themes/lime.png'
+          colorTxt: 'Lime',
+          sample: '../../src/images/themes/lime.png',
+          colorClass: 'lime'
         }, {
-          name: 'Blue',
-          sample: '../../src/images/themes/blue.png'
+          colorTxt: 'Blue',
+          sample: '../../src/images/themes/blue.png',
+          colorClass: 'blue'
         }, {
-          name: 'Deep Purple',
-          sample: '../../src/images/themes/purple.png'
+          colorTxt: 'Deep Purple',
+          sample: '../../src/images/themes/purple.png',
+          colorClass: 'purple'
         }, {
-          name: 'Teal',
-          sample: '../../src/images/themes/green.png'
+          colorTxt: 'Teal',
+          sample: '../../src/images/themes/green.png',
+          colorClass: 'teal'
         }
       ]
     }
+    this.handleClick = this.handleClick.bind(this)
   }
+
+  
+  handleClick(e) {
+   event.preventDefault()
+    const el = event.target
+     console.log("colorLists class", this.state.colorLists[0].colorClass); 
+  }
+
   render() {
     return (
-      <ul className="themeColorList">
-        <Row>
-          {this
-            .state
-            .colorLists
-            .map((colorList, index) => {
-              return <ThemeList key={colorList.name} detail={colorList}/>
-            })
-         }
-        </Row>
-      </ul>
-
+      <div>
+       <ThemeList colorLists={this.state.colorLists} handleClick={this.handleClick}/>
+      </div>
     );
   }
 }
