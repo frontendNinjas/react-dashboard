@@ -31,7 +31,7 @@ export class TableCustom extends Component {
         <TableBody>
           {this.props.data.map((d,index) => {
             return(   
-                React.cloneElement(this.props.children,{rowdata:d,key:index,delete:this.props.deleteUser,userForUpdate:this.props.userForUpdate})
+                React.cloneElement(this.props.children,{rowdata:d,key:index,deleteUser:this.props.deleteUser,userForUpdate:this.props.userForUpdate})
            )
           })}
           
