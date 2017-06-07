@@ -1,16 +1,16 @@
 var toDoData = [
 		{
 			task: 'harru',
-			done: true
+			status: true
 		},{
 			task: 'pooji',
-			done: false
+			status: false
 		},{
 			task: 'vini',
-			done: true
+			status: true
 		},{
 			task: 'test',
-			done: true
+			status: true
 		}
 ];
 

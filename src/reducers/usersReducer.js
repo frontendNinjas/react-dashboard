@@ -1,4 +1,3 @@
-
 export default function usersReducer(state=[], action){
 	if(action.type === 'ADD_USER'){
 		return [...state, Object.assign({},action.users)];	
@@ -12,7 +11,6 @@ export default function usersReducer(state=[], action){
 		let removedArray = state.filter(function(n){
 			return n.username !== action.username;
 		})
-		console.log('removedArray', removedArray);
 		return removedArray
 	}else if(action.type === 'LOAD_USERS'){
 		return action.users;

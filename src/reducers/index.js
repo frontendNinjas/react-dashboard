@@ -1,11 +1,12 @@
 import {combineReducers} from 'redux';
 import products from '../reducers/productReducer';
-import user from '../reducers/userReducer';
 import users from '../reducers/usersReducer';
+import toDoList from '../reducers/toDoListReducer';
 
 const rootReducer = combineReducers({
 	products:products,
-	users:users
+	users:users,
+	toDoLists: toDoList
 });
 
 export default rootReducer;

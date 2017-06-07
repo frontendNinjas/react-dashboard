@@ -4,7 +4,6 @@ import FlatButton from 'material-ui/FlatButton';
 import FontIcon from 'material-ui/FontIcon';
 import RaisedButton from 'material-ui/RaisedButton';
 import Delete from 'material-ui/svg-icons/action/delete';
-import Edit from 'material-ui/svg-icons/action/delete';
 
 const style = {
   margin: 0,
