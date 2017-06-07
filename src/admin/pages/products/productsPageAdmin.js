@@ -40,16 +40,17 @@ class productsPageAdmin extends React.Component {
 
   render() {
     return (
-      <Row>
-        <Col>
-          <h3>All Products List</h3>
-        </Col>
+      <div>
+        <Link to="/admin/add-new-products">
+          <RaisedButton label="Add" primary={true}/>
+        </Link>
+        <hr/>
         <Col>
           <Products
             productRow={this.props.products}
             deleteProductRow={this.deleteProductRow}/>
         </Col>
-      </Row>
+      </div>
     )
   }
 }

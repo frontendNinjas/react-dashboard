@@ -21,17 +21,18 @@ class Products extends React.Component {
           .map((row, index) => (
             <Col xs={3} key={index}>
               <Card>
-                <CardTitle title={row.productname} subtitle={row.price}/>
+                <CardHeader
+                  title={row.productname}
+                  subtitle={row.price}
+                  avatar= {<Link
+                  to="/admin/add-new-products">
+                  <RaisedButton label="Edit"/>
+                </Link>}
+                />
                 <CardMedia>
                   <img src={row.image}/>
                 </CardMedia>
                 <CardText>Description: {row.bodyHtml}</CardText>
-                <CardHeader>
-                  <Link to="/admin/add-new-products">
-                      <RaisedButton label="Add" primary={true}/>
-                      <RaisedButton label="Edit" secondary={true}/>
-                  </Link>
-                </CardHeader>
               </Card>
             </Col>
           ))}
