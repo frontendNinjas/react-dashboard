@@ -5,7 +5,7 @@ import {Link, IndexLink} from 'react-router';
 const LeftSidebar = (props) => {
   return (
     <div className="sidebar-wrapper">
-      <div className={props.themeClass}>
+      <div className={props.themes}>
         <MenuItem containerElement={< Link to = "/admin" />}>Dashboard</MenuItem>
         <MenuItem containerElement={< Link to = "/admin/website-pages-admin" />}>Pages</MenuItem>
         <MenuItem className="whiteColor">Products

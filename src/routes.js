@@ -11,7 +11,7 @@ import usersPageAdmin from '../src/admin/pages/users/usersPageAdmin';
 import homePageUser from '../src/user/pages/homePageUser';
 import registerPageAdmin from '../src/admin/pages/registerPageAdmin';
 import websitePagesAdmin from '../src/admin/pages/websitePagesAdmin';
-import themes from '../src/admin/pages/themes/themes';
+import themes from '../src/admin/pages/themes/themesPageAdmin';
 import addNewUserPageAdmin from '../src/admin/pages/addNewUserPageAdmin';
 import addNewProducts from '../src/admin/pages/products/addNewProducts';
 import dashboardMain from '../src/admin/pages/dashboardMain';

@@ -3,16 +3,15 @@ import LeftSidebar from '../../../src/components/LeftSidebar';
 import DashboardHeaderAdmin from '../../../src/admin/pages/dashboardHeaderAdmin';
 import RightContainer from '../../../src/components/RightContainer';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import themes from '../../../src/admin/pages/themes/themes';
+import themes from '../../../src/admin/pages/themes/themesPageAdmin';
 
 class securedPageAdmin extends React.Component {
 
   constructor(props) {
     super(props)
     this.state = {
-      colorLists: 'blue'
+      themes: 'blue'
     }
-    // this.props.actions.updatedThemes();
   }
   render() {
     return (
@@ -21,10 +20,10 @@ class securedPageAdmin extends React.Component {
           <DashboardHeaderAdmin/>
         </MuiThemeProvider>
         <MuiThemeProvider>
-          <LeftSidebar themeClass={this.state.colorLists}/>
+          <LeftSidebar themes={this.state.themes}/>
         </MuiThemeProvider>
         <MuiThemeProvider>
-          <RightContainer body={this.props.children}/>
+          <RightContainer body={this.props.children} />
         </MuiThemeProvider>
       </div>
     )

@@ -8,41 +8,33 @@ import {
   CardText
 } from 'material-ui/Card';
 import {Grid, Row, Col} from 'react-flexbox-grid';
+import RaisedButton from 'material-ui/RaisedButton';
 
 const style = {
   margin: 12,
-  width:360
+  width: 360
 };
 
-class ThemeList extends React.Component {
-  render() {
-    return (
-      <Row>
-        <ul className="themeColorList">
-          {this
-            .props
-            .colorLists
-            .map((colorList, index) => {
-              return <Card style={style} key={colorList.colorTxt}>
-                <li
-                  className="cursor"
-                  id={colorList.colorClass}
-                  onClick={this.props.handleClick}>
-                  <CardMedia
-                    overlay={< CardTitle title = {
-                    colorList.colorTxt
-                  } />}>
-                    <img className="themeImages" src={colorList.sample}/>
-                  </CardMedia>
-                </li>
-              </Card>
+const btnstyle = {
+  width: 360
+};
 
-            })
-           }
-        </ul>
-      </Row>
-    )
-  }
+const ThemeList = (props) => {
+	return (
+	        <Card style={style}>
+          <div id={props.id} >
+            <CardMedia
+              overlay={< CardTitle title = {
+              props.colorTxt
+            } />}>
+              <img className="themeImages" src={props.sampleImage}/>
+            </CardMedia>
+          </div>
+            <RaisedButton style={btnstyle} label="Apply" secondary={true} onClick={() => props.handleClick(props.themes.colorClass)}/>
+        </Card>
+	)
 }
 
 export default ThemeList
+
+

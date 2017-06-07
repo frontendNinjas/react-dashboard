@@ -141,8 +141,7 @@ class UsersPageAdmin extends Component {
                     headerItems={this.state.header}
                     data={this.props.users}
                     userForUpdate={this.userForUpdate}
-                    deleteUser={this.deleteUser}
-                    >
+                    deleteUser={this.deleteUser}>
                     <UserTableRow/>
                 </TableCustom>
             </div>

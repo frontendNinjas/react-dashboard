@@ -11,6 +11,11 @@ class productsPageAdmin extends React.Component {
 
   constructor(props) {
     super(props);
+    this
+      .props
+      .actions
+      .loadProducts();
+
     this.deleteProductRow = this
       .deleteProductRow
       .bind(this);
@@ -36,12 +41,14 @@ class productsPageAdmin extends React.Component {
   render() {
     return (
       <Row>
-        <Col><h3>All Products List</h3> </Col>
-         <Col>
-        <Products
-          productRow={this.props.products}
-          deleteProductRow={this.deleteProductRow}/>
-         </Col>
+        <Col>
+          <h3>All Products List</h3>
+        </Col>
+        <Col>
+          <Products
+            productRow={this.props.products}
+            deleteProductRow={this.deleteProductRow}/>
+        </Col>
       </Row>
     )
   }

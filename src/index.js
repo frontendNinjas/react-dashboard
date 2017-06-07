@@ -7,8 +7,8 @@ import App from '../src/App.js'
 import {loadUsers} from '../src/actions/userActions'
 import {loadProducts} from '../src/actions/productActions'
 import configureStore from '../src/store/configureStore';
+import {loadThemes} from '../src/actions/themesAction'
 const store = configureStore();
-store.dispatch(loadProducts());
 ReactDOM.render(
 	<Provider store={store}>
 		<Router history={hashHistory} routes={Routes} component={App}/>
