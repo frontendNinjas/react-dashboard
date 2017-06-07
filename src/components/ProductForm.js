@@ -5,6 +5,7 @@ import ImageUpload from '../../src/components/ImageUpload';
 
 const ProductForm = ({products, onSave, onChange}) => {
   return (
+    <div>
     <form>
       <h1>Add Product</h1>
       <TextField
@@ -26,6 +27,7 @@ const ProductForm = ({products, onSave, onChange}) => {
       <br/><br/>
       <RaisedButton type="submit" label="Submit" primary={true} onClick={onSave}/>
     </form>
+    </div>
   )
 }
 
