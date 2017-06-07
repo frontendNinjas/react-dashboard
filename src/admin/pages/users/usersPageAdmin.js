@@ -36,7 +36,7 @@ class UsersPageAdmin extends Component {
             .loadUsers();
         this.state = {
             header: [
-                'Email', 'Full Name', 'User Name', 'Name', 'Delete'
+                'Email', 'Full Name', 'User Name', 'Name', 'Delete', 'Edit'
             ],
             open: false,
             user: {
@@ -90,18 +90,15 @@ class UsersPageAdmin extends Component {
         this.setState({open: false});
     }
 
-    deleteUser(e) {
-        e.preventDefault();
+    deleteUser(id) {
         this
             .props
             .actions
-            .deleteUser(e.target.getAttribute('id'));
-
+            .deleteUser(id);
     }
-    userForUpdate(e) {
-        e.preventDefault();
+    userForUpdate(id) {
         var updatedUsers = Object.assign([], this.props.users)
-        var foundIndex = updatedUsers.findIndex(x => x.username == e.target.getAttribute('id'));
+        var foundIndex = updatedUsers.findIndex(x => x.username == id);
         updatedUsers[foundIndex]
         this.setState({user: updatedUsers[foundIndex]});
         this.setState({open: true});
@@ -124,8 +121,8 @@ class UsersPageAdmin extends Component {
         ];
         return (
             <div>
-                <RaisedButton label="Add / Edit User" onTouchTap={this.handleOpen}/>
-                <p>Click on the Full Name to edit individual record of the user</p>
+                <RaisedButton label="Add User" onTouchTap={this.handleOpen}/>
+                <hr/>
                 <Dialog
                     title="Manage User"
                     actions={actions}

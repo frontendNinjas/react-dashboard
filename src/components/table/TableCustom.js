@@ -15,7 +15,8 @@ export class TableCustom extends Component {
   }
 
   render() {
-    let header
+    let header,
+      tableBody
     if (this.props.headerItems.length > 0) {
       header = (
         <TableHeader>
@@ -25,19 +26,32 @@ export class TableCustom extends Component {
     } else {
       header = (null)
     }
-    return (
-      <Table>
-        {header}
-        <TableBody>
-          {this.props.data.map((d,index) => {
-            return(   
-                React.cloneElement(this.props.children,{rowdata:d,key:index,delete:this.props.deleteUser,userForUpdate:this.props.userForUpdate})
-           )
-          })}
-          
-        </TableBody>
-      </Table>
-    );
+    if (this.props.data.length > 0) {return (
+        <Table>
+          {header}
+          <TableBody>
+            {this
+              .props
+              .data
+              .map((d, index) => {
+                return (React.cloneElement(this.props.children, {
+                  rowdata: d,
+                  key: index,
+                  deleteUser: this.props.deleteUser,
+                  userForUpdate: this.props.userForUpdate,
+                  toDoForUpdate: this.props.toDoForUpdate,
+                  deleteToDo: this.props.deleteToDo,
+                  toDoItemModalOpen: this.props.toDoItemModalOpen,
+                  toggleCheckbox: this.props.toggleCheckbox
+                }))
+              })}
+
+          </TableBody>
+        </Table>
+      )
+    } else {
+      return (null)
+    }
   }
 }
 
