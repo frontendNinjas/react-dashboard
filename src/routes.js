@@ -5,13 +5,13 @@ import AppAdmin from '../src/AppAdmin.js'
 import homePageAdmin from '../src/admin/pages/homePageAdmin';
 import securedPageAdmin from '../src/admin/pages/securedPageAdmin';
 import inventoryPageAdmin from '../src/admin/pages/inventoryPageAdmin';
-import productsPageAdmin from '../src/admin/pages/productsPageAdmin';
+import productsPageAdmin from '../src/admin/pages/products/productsPageAdmin';
 import usersPageAdmin from '../src/admin/pages/users/usersPageAdmin';
 import homePageUser from '../src/user/pages/homePageUser';
 import registerPageAdmin from '../src/admin/pages/registerPageAdmin';
 import websitePagesAdmin from '../src/admin/pages/websitePagesAdmin';
 import themes from '../src/admin/pages/themes';
-import addNewProducts from '../src/admin/pages/addNewProducts';
+import addNewProducts from '../src/admin/pages/products/addNewProducts';
 import dashboardMain from '../src/admin/pages/dashboard/dashboardMain';
 
 
