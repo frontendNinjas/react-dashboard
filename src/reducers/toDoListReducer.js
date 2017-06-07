@@ -1,14 +1,27 @@
-export default function toDoListReducer(state=[], action){
-	switch(action.type){
-		case 'LOAD_TO_DO_List_SUCCESS': 
-			return action.toDoLists;
-		case 'UPDATE_USERS_SUCCESS': 
-			return [...state.filter(user => user.username !== action.user.username),Object.assign({},action.user)];
-		case 'CREATE_USERS_SUCCESS': 
-			return [...state, Object.assign({},action.user)];	
-		case 'LOAD_USERS_AFTER_DELETE_SUCCESS': 
-			return Object.assign([], action.users);
-		default:
-			return state;
-	}
+export default function dashboardReducer(state = [], action) {
+				if (action.type === 'TODO_SUBMIT') {
+								return [
+												...state,
+												Object.assign({}, action.toDoList)
+								];
+				} else if (action.type === 'TODO_EDIT') {
+								var updatedToDoList = Object.assign([], state)
+								var foundIndex = updatedToDoList.findIndex(x => x.task == action.updateItem.oldValue);
+								updatedToDoList[foundIndex].task = action.updateItem.newValue
+								return updatedToDoList;
+				} else if (action.type === 'TODO_DELETE') {
+								let remainingArray = state.filter(function (n) {
+												return n !== action.deleteToDoItem;
+								})
+								return remainingArray
+				}else if(action.type === 'TODO_LOAD'){
+					return action.toDoLists;
+				} else if(action.type === 'UPDATE_CHECKBOX_STATUS'){
+								var updatedCheckboxStatus = Object.assign([], state)
+								var foundIndex = updatedCheckboxStatus.findIndex(x => x.task == action.updateItem.task);
+								updatedCheckboxStatus[foundIndex].status = action.updateItem.status
+								return updatedCheckboxStatus;
+				} else {
+								return [...state]
+				}
 }
