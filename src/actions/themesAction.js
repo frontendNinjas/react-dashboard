@@ -4,7 +4,7 @@ export function loadThemesSuccess(themes) {
   return {type: 'LOAD_THEMES_SUCCESS', themes: themes}
 }
 
-export function updateThemesSuccess(themes) {
+export function updateThemeState(themes) {
     return {type: 'UPDATE_THEMES_SUCCESS', themes: themes}
 }
 
@@ -19,9 +19,4 @@ export function loadThemes(themes) {
         throw(error);
       })
   }
-}
-
-export function updateThemes(themes) {
-    const newTheme = themes;
-   console.log("dhajsdhajsdhsaj", newTheme)
 }

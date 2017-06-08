@@ -4,10 +4,9 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import ThemeList from '../../../../src/components/ThemesList';
 import {Grid, Row, Col} from 'react-flexbox-grid';
 import securedPageAdmin from '../../../../src/admin/pages/securedPageAdmin';
-
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux';
-import * as updateUsersSuccess from '../../../../src/actions/themesAction'
+import * as themesAction from '../../../../src/actions/themesAction'
 
 const styles = {
   block: {
@@ -22,37 +21,44 @@ class themes extends React.Component {
 
   constructor(props) {
     super(props)
-    this.state = {
-         className: 'blue',
-    }
-    this.props.actions.loadThemes();
-    this.updateThemeState = this.updateThemeState.bind(this);
+    this
+      .props
+      .actions
+      .loadThemes();
+    this.updateThemeState = this
+      .updateThemeState
+      .bind(this);
   }
 
   updateThemeState(id) {
-    console.log("this is id", id)
+    this.props.actions.updateThemeState(id);
   }
 
   render() {
     return (
-      <div>
-        {this.props.themes.map((item,i) => 
-          <ThemeList key={i} themes={item} handleClick={this.updateThemeState} id={item.id} colorTxt={item.colorTxt} sampleImage={item.sample} />
-        )}
-      </div>
+      <Row >
+        {this
+          .props
+          .themes
+          .map((item, i) => <ThemeList
+            key={i}
+            themes={item}
+            handleClick={this.updateThemeState}
+            id={item.id}
+            colorTxt={item.colorTxt}
+            sampleImage={item.sample}/>)}
+      </Row>
     );
   }
 }
 
 function mapStateToProps(state, ownProps) {
-  return {
-    themes: state.themes
-  }
+  return {themes: state.themes}
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(updateUsersSuccess, dispatch)
+    actions: bindActionCreators(themesAction, dispatch)
   }
 }
 

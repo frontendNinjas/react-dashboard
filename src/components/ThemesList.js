@@ -12,7 +12,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 
 const style = {
   margin: 12,
-  width: 360
+  width: 360,
 };
 
 const btnstyle = {
@@ -21,6 +21,7 @@ const btnstyle = {
 
 const ThemeList = (props) => {
 	return (
+    <div>
 	        <Card style={style}>
           <div id={props.id} >
             <CardMedia
@@ -32,6 +33,7 @@ const ThemeList = (props) => {
           </div>
             <RaisedButton style={btnstyle} label="Apply" secondary={true} onClick={() => props.handleClick(props.themes.colorClass)}/>
         </Card>
+        </div>
 	)
 }
 
