@@ -31,7 +31,10 @@ class themes extends React.Component {
   }
 
   updateThemeState(id) {
-    this.props.actions.updateThemeState(id);
+    this
+      .props
+      .actions
+      .updateThemeState(id);
   }
 
   render() {

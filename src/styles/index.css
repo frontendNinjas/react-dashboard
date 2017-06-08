@@ -51,27 +51,37 @@ header {
     width: 250px; 
     z-index: 1000;
     position: fixed;
+     height: 990px;
 }
 .blue {
   background-color: #00BCD4;
-  height: 990px;
-  color: #fff
+  color: #fff;
+   height: 990px;
 }
 
 .lime{
     background-color :#CDDC39;
-    height: 990px;
+     height: 990px;
+}
+.lime > div > a > div > div {
     color: #5c4806 !important
 }
 .purple{
     background-color :#7E57C2;
-    height: 990px;
+     height: 990px;
+}
+.purple > div > a > div > div, .teal > div > a > div > div, .blue > div > a > div > div  {
+    color: #fff !important
+}
+.purple > div > span > div > div , .teal > div > span > div > div , .blue > div > span > div > div {
+    color: #fff !important
+}
+.purple > div > span > div > div > div > a > div > div , .teal > div > span > div > div > div > a > div > div , .blue > div > span > div > div > div > a > div > div{
     color: #fff !important
 }
 .teal{
     background-color :#00796B;
-    height: 990px;
-    color: #fff !important
+     height: 990px;
 }
 .page-content-wrapper{
     margin-left: 286px;
