@@ -10,19 +10,16 @@ import {bindActionCreators} from 'redux';
 import * as themesAction from '../../../src/actions/themesAction'
 
 class securedPageAdmin extends React.Component {
-
   constructor(props) {
     super(props)
-    this.state = {
-      themesDefault: 'blue'
-    }
   }
+  
   render() {
-     const {themes} = this.props;
+    const {themes} = this.props;
     return (
       <div>
         <MuiThemeProvider>
-          <DashboardHeaderAdmin themes={themes}/>
+          <DashboardHeaderAdmin/>
         </MuiThemeProvider>
         <MuiThemeProvider>
           <LeftSidebar themes={themes} />
