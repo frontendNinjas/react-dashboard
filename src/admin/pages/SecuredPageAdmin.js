@@ -13,19 +13,19 @@ class securedPageAdmin extends React.Component {
   constructor(props) {
     super(props)
   }
-  
+
   render() {
-    const {newTheme} = this.props;
+    const {defaultTheme} = this.props;
     return (
       <div>
         <MuiThemeProvider>
           <DashboardHeaderAdmin/>
         </MuiThemeProvider>
         <MuiThemeProvider>
-          <LeftSidebar themes={newTheme} />
+          <LeftSidebar themes={defaultTheme}/>
         </MuiThemeProvider>
         <MuiThemeProvider>
-          <RightContainer body={this.props.children} />
+          <RightContainer body={this.props.children}/>
         </MuiThemeProvider>
       </div>
     )
@@ -33,9 +33,7 @@ class securedPageAdmin extends React.Component {
 }
 
 function mapStateToProps(state, ownProps) {
-  return {
-    newTheme: state.themes.newTheme
-  }
+  return {defaultTheme: state.defaultTheme}
 }
 
 function mapDispatchToProps(dispatch) {
@@ -44,4 +42,4 @@ function mapDispatchToProps(dispatch) {
   }
 }
 
-export default connect (mapStateToProps,mapDispatchToProps) (securedPageAdmin);
+export default connect(mapStateToProps, mapDispatchToProps)(securedPageAdmin);

@@ -21,6 +21,10 @@ class themes extends React.Component {
 
   constructor(props) {
     super(props)
+        this
+      .props
+      .actions
+      .initialState();
     this
       .props
       .actions
