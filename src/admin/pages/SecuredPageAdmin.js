@@ -12,6 +12,10 @@ import * as themesAction from '../../../src/actions/themesAction'
 class securedPageAdmin extends React.Component {
   constructor(props) {
     super(props)
+    this
+      .props
+      .actions
+      .initialState();
   }
 
   render() {
