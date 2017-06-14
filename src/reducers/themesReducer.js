@@ -5,8 +5,11 @@ export default function themesReducer(state = [], action) {
         case 'LOAD_THEMES_SUCCESS':
             return action.themes;
         case 'UPDATE_THEMES_SUCCESS':
-            var updatedThemes = action.theme
-            return updatedThemes;
+            let newTheme = action.themes;
+            console.log("newTheme ", newTheme);
+            let store = Object.assign({}, ({newTheme: newTheme}));
+            console.log('new store', store);
+            return store;
         default:
             return state;
     }

@@ -28,13 +28,14 @@ class themes extends React.Component {
     this.updateThemeState = this
       .updateThemeState
       .bind(this);
-  }
+      }
 
   updateThemeState(id) {
     this
       .props
       .actions
       .updateThemeState(id);
+
   }
 
   render() {
@@ -43,13 +44,14 @@ class themes extends React.Component {
         {this
           .props
           .themes
-          .map((item, i) => <ThemeList
+          .map((item, i) => {
+            return <ThemeList
             key={i}
             themes={item}
             handleClick={this.updateThemeState}
-            id={item.id}
             colorTxt={item.colorTxt}
-            sampleImage={item.sample}/>)}
+            sampleImage={item.sample}/>})
+            }
       </Row>
     );
   }

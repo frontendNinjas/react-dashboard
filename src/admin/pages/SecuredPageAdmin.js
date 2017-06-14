@@ -15,14 +15,14 @@ class securedPageAdmin extends React.Component {
   }
   
   render() {
-    const {themes} = this.props;
+    const {newTheme} = this.props;
     return (
       <div>
         <MuiThemeProvider>
           <DashboardHeaderAdmin/>
         </MuiThemeProvider>
         <MuiThemeProvider>
-          <LeftSidebar themes={themes} />
+          <LeftSidebar themes={newTheme} />
         </MuiThemeProvider>
         <MuiThemeProvider>
           <RightContainer body={this.props.children} />
@@ -34,7 +34,7 @@ class securedPageAdmin extends React.Component {
 
 function mapStateToProps(state, ownProps) {
   return {
-    themes: state.themes
+    newTheme: state.themes.newTheme
   }
 }
 

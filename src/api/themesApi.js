@@ -12,10 +12,6 @@ var themesApi = {
                 resolve(_clone(themesData));
             }, delay);
         });
-    },
-
-    updateThemesSuccess(themes) {
-        console.log("updateThemesSuccess api")
     }
 
 }
