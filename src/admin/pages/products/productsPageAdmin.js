@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import * as productActions from '../../../../src/actions/productActions';
 import {bindActionCreators} from 'redux';
 import RaisedButton from 'material-ui/RaisedButton';
-import Products from '../../../../src/components/Products';
+import Products from '../../../../src/components/productPage/Products';
 import {Grid, Row, Col} from 'react-flexbox-grid';
 
 class productsPageAdmin extends React.Component {
@@ -16,40 +16,31 @@ class productsPageAdmin extends React.Component {
       .actions
       .loadProducts();
 
-    this.deleteProductRow = this
-      .deleteProductRow
+    this.deleteProduct = this
+      .deleteProduct
       .bind(this);
   }
 
-  deleteProductRow(event) {
-    console.log("product page admin 1");
-    event.preventDefault();
-    var productToDelete = this
-      .props
-      .products
-      .filter(function (product) {
-        return product.productid == event
-          .target
-          .getAttribute('id');
-      })
+  deleteProduct(productid) {
+    console.log("product delete", productid);
     this
       .props
       .actions
-      .deleteProduct(productToDelete[0].productid);
+      .deleteProduct(productid);
   }
 
   render() {
     return (
       <div>
-        <Link to="/admin/add-new-products">
-          <RaisedButton label="Add" primary={true}/>
-        </Link>
-        <hr/>
-        <Col>
-          <Products
-            productRow={this.props.products}
-            deleteProductRow={this.deleteProductRow}/>
-        </Col>
+        <div className="titleWrapper">
+          <h1 className="titleContainer">Products</h1>
+          <Link to="/admin/add-new-products" className="buttonContainer ">
+            <RaisedButton label="Add New Product"/>
+          </Link>
+        </div>
+        <div className="productContainer">
+          <Products productRow={this.props.products} deleteProduct={this.deleteProduct}/>
+        </div>
       </div>
     )
   }

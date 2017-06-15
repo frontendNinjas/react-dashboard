@@ -125,3 +125,54 @@ list-style: none
 .cursor{
     cursor: pointer
 }
+.productsButtons{
+  width: 188px;
+  margin: 0 auto;
+}
+.button {
+  background-color: transparent;
+  border: 1px solid #FAFAFA;
+  width: 92px;
+  height: 45px;
+  cursor: pointer;
+  display: inline-block;
+}
+.titleWrapper{
+    width: 100%;
+    float: left
+}
+.titleContainer{
+    float: left;
+    width: 190px;
+    margin: 0;
+    padding: 0;
+}
+.buttonContainer{
+ width: 199px;
+}
+.productContainer{
+    width: 100%;
+    float: left;
+    margin: 25px auto;
+}
+.whiteBackground{
+    background-color: #fff;
+    padding: 0;
+    padding:0 0 35px 0 ;
+}
+.marginLeft {
+    margin-left: 20px !important;
+    text-align:left;
+    margin-right: 20px !important;
+}
+.greyBackground{
+    background-color: rgba(213, 213, 213, 0.29);
+    padding: 15px 0 15px 0;
+}
+.extraSpaceImageBox{
+    margin: 50px 0 50px 0
+}
+.bottomMargin{
+    margin: 0 0 20px 0;
+    word-break: break-all
+}

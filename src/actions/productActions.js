@@ -12,8 +12,9 @@ export function createProductsSuccess(products) {
   return {type: 'CREATE_PRODUCTS_SUCCESS', products: products}
 }
 
-export function deleteProductsSuccess(products) {
-  return {type: 'DELETE_PRODUCTS_SUCCESS', products: products}
+
+export function deleteProduct(productid){
+	return {type:'DELETE_PRODUCTS_SUCCESS' , productid:productid}
 
 }
 
@@ -40,19 +41,6 @@ export function saveProduct(products) {
         console.log("updateProductsSuccess", updateProductsSuccess(savedProducts));
         console.log("createProductsSuccess", createProductsSuccess(savedProducts));        
         newProductDetails.productname ? dispatch(updateProductsSuccess(savedProducts)) : dispatch(createProductsSuccess(savedProducts));
-      })
-      .catch(error => {
-        throw(error);
-      })
-  }
-}
-
-export function deleteProduct(products) {
-  return function (dispatch) {
-    return productsApi
-      .deleteProductRow(products)
-      .then(() => {
-        dispatch(deleteProductsSuccess(products));
       })
       .catch(error => {
         throw(error);

@@ -6,7 +6,7 @@ import Input from '../../../../src/components/Input';
 import Checkbox from 'material-ui/Checkbox';
 import {List, ListItem} from 'material-ui/List';
 import Buttons from '../../../../src/components/Buttons';
-import ProductForm from '../../../../src/components/ProductForm'
+import ProductForm from '../../../../src/components/productPage/ProductForm'
 import * as productActions from '../../../../src/actions/productActions'
  
 const style = {

@@ -7,37 +7,37 @@ import _indexOf from 'lodash/indexOf'
 
 var productsApi = {
 
-    getAllproducts(){
+	getAllproducts() {
 		return new Promise((resolve, reject) => {
-			setTimeout(()=>{				
+			setTimeout(() => {
 				resolve(_clone(productsData));
-			},delay);
+			}, delay);
 		});
 	},
-    
-    deleteProductRow(products){
-    	console.log("api 3");
-			return new Promise((resolve, reject) => {
-				setTimeout(()=>{
-					var products = _remove(productsData, function(n){
-						return n.products == products
+
+	deleteProduct(productid) {
+		return new Promise((resolve, reject) => {
+			setTimeout(() => {
+				var products = _remove(productsData, function (n) {
+					return n.productname == productid
 				});
 				resolve(productsData);
-			},delay);
+			}, delay);
 		})
 	},
-    saveProduct(products){
-		return new Promise((resolve, reject) => {
-			setTimeout(()=>{
-				if(_find(productsData,{productname: products.productid})){
-					var existingProductsIndex = _indexOf(productsData, _find(productsData, {id: products.productId})); 
-					productsData.splice(existingProductsIndex, 1, products);			
 
-				}else{
+	saveProduct(products) {
+		return new Promise((resolve, reject) => {
+			setTimeout(() => {
+				if (_find(productsData, {productname: products.productid})) {
+					var existingProductsIndex = _indexOf(productsData, _find(productsData, {id: products.productId}));
+					productsData.splice(existingProductsIndex, 1, products);
+
+				} else {
 					productsData.push(products);
 				}
 				resolve(_clone(products))
-			},delay);
+			}, delay);
 		})
 	}
 
