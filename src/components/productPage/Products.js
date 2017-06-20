@@ -19,7 +19,8 @@ const Products = (props) => {
         .map((row, index) => (
           <Col xs={3} key={index} className="bottomMargin">
             <Card>
-              <CardHeader title={row.productname} subtitle={row.price}/>
+              <CardTitle title={row.productname} subtitle={row.productCode}/>
+              <CardHeader title="" subtitle={row.price}/>
               <CardMedia>
                 <img src={row.image}/>
               </CardMedia>
@@ -27,7 +28,7 @@ const Products = (props) => {
               <div className="productsButtons">
                 <div className="button">
                   <Link to="/admin/add-new-products">
-                    <RaisedButton label="Edit"/>
+                    <RaisedButton label="Edit" onClick={() => props.editbutton(row.productid)}/>
                   </Link>
                 </div>
                 <div className="button">
