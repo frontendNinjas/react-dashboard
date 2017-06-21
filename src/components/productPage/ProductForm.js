@@ -82,7 +82,7 @@ const ProductForm = (props) => {
                 <br/>
                 <div className="greyBackground">
                   <Row className="marginLeft">
-                    <FlatButton label="Move to Trash"/>
+                    <FlatButton label="Clear Product"/>
                     <RaisedButton type="submit" label="Publish" primary={true} onClick={props.onSave}/>
                   </Row>
                 </div>

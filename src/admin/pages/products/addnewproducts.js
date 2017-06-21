@@ -63,7 +63,7 @@ class addNewProducts extends React.Component {
       <div>
         <ProductForm
           onSave={this.saveProduct}
-          products={this.state.products}
+          products={this.props.products}
           onChange={this.onChange}/>
       </div>
     )
