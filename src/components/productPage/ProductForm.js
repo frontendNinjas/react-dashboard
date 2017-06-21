@@ -32,7 +32,7 @@ const ProductForm = (props) => {
                     fullWidth={true}
                     name="productname"
                     floatingLabelText="Enter Product name here"
-                    value={props.productname}
+                    value={props.products.productname}
                     onChange={props.onChange}/>
                 </Row>
                 <Row>
@@ -44,7 +44,7 @@ const ProductForm = (props) => {
                     rows={2}
                     rowsMax={4}
                     floatingLabelText="Porduct short description"
-                    value={props.bodyHtml}
+                    value={props.products.bodyHtml}
                     onChange={props.onChange}/>
                 </Row>
                 <br/>
@@ -57,7 +57,7 @@ const ProductForm = (props) => {
                     fullWidth={true}
                     name="price"
                     floatingLabelText="Product price"
-                    value={props.price}
+                    value={props.products.price}
                     onChange={props.onChange}/>
                 </Row>
                 <Row>
@@ -66,7 +66,7 @@ const ProductForm = (props) => {
                     fullWidth={true}
                     name="productCode"
                     floatingLabelText="Product Code"
-                    value={props.code}
+                    value={props.products.productCode}
                     onChange={props.onChange}/>
                 </Row>
               </Paper>
@@ -77,7 +77,7 @@ const ProductForm = (props) => {
                   <h4 className="marginLeft">Product Image</h4>
                 </Row>
                 <Row className="marginLeft">
-                  <ImageUpload name="image" value={props.image} onChange={props.onChange}/>
+                  <ImageUpload name="image" value={props.products.image} onChange={props.onChange}/>
                 </Row>
                 <br/>
                 <div className="greyBackground">
