@@ -23,22 +23,18 @@ class addNewProducts extends React.Component {
     this.saveProduct = this
       .saveProduct
       .bind(this);
-    this.state = {
-      product: {
-        productname: '',
-        bodyHtml: '',
-        price: '',
-        image: '',
-        productCode: ''
-      }
+		this.state = {
+    	products: Object.assign({},this.props.products),
+    	errors : {}
     }
   }
 
   onChange(e) {
     e.preventDefault();
+    const field = e.target.name;
     let newProduct = Object.assign({}, this.state.products)
-    newProduct[e.target.name] = e.target.value
-    this.setState({products: newProduct});
+    newProduct[field] = e.target.value
+    return this.setState({products: newProduct});
   }
 
   saveProduct(e) {
@@ -51,17 +47,15 @@ class addNewProducts extends React.Component {
         .actions
         .createProductsSuccess(newProduct);
     } else {
-      debugger;
       this
         .props
         .actions
-        .updateProductsSuccess(newProduct);
+        .updateProducts(this.state.products);
     }
     this
       .context
       .router
       .push('/admin/all-products');
-
   }
 
   render() {

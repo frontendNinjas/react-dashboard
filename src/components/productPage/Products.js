@@ -27,8 +27,8 @@ const Products = (props) => {
               <CardText>Description: {row.bodyHtml}</CardText>
               <div className="productsButtons">
                 <div className="button">
-                  <Link to="/admin/add-new-products">
-                    <RaisedButton label="Edit" onClick={() => props.editbutton(row.productid)}/>
+                  <Link to="/admin/add-new-products" to={'/admin/add-new-products/' + row.productname}>
+                    <RaisedButton label="Edit"/>
                   </Link>
                 </div>
                 <div className="button">

@@ -14,9 +14,6 @@ class productsPageAdmin extends React.Component {
     this.deleteProduct = this
       .deleteProduct
       .bind(this);
-    this.editbutton = this
-      .editbutton
-      .bind(this);
   }
 
   deleteProduct(productid) {
@@ -25,18 +22,6 @@ class productsPageAdmin extends React.Component {
       .props
       .actions
       .deleteProduct(productid);
-  }
-
-  editbutton(id) {
-    console.log("edit", id)
-
-    // const field = event.target.name; let products = this.state.products;
-    // products[field] = event.target.value; return
-    // this.setState({products:products}); console.log("edit button click") var
-    // updatedProducts = Object.assign([], this.props.products); var foundIndex =
-    // updatedProducts.findIndex(x => x.productid == id);
-    // updatedProducts[foundIndex]; this.setState({product:
-    // updatedProducts[foundIndex]});
   }
 
   render() {
@@ -52,7 +37,7 @@ class productsPageAdmin extends React.Component {
           <Products
             productRow={this.props.products}
             deleteProduct={this.deleteProduct}
-            editbutton={this.editbutton}/>
+          />
         </div>
       </div>
     )

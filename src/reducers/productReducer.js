@@ -7,10 +7,8 @@ export default function productReducer(state = [], action) {
     case 'CREATE_PRODUCTS_SUCCESS':
       return [...state, Object.assign({}, action.products)]
     case 'UPDATE_PRODUCTS_SUCCESS':
-    debugger;
       const updatedProduct = Object.assign([], state)
       const indexOfProductsUpdate = updatedProduct.findIndex(x => x.productid == action.products.productid);
-      action.products.productid = action.products.productCode;
       updatedProduct[indexOfProductsUpdate] = action.products;
       return updatedProduct;
     case 'DELETE_PRODUCTS_SUCCESS':

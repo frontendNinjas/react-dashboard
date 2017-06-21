@@ -26,20 +26,20 @@ var productsApi = {
 		})
 	},
 
-	// saveProduct(products) {
-	// 	return new Promise((resolve, reject) => {
-	// 		setTimeout(() => {
-	// 			if (_find(productsData, {productname: products.productid})) {
-	// 				var existingProductsIndex = _indexOf(productsData, _find(productsData, {id: products.productId}));
-	// 				productsData.splice(existingProductsIndex, 1, products);
+	updateProducts(products) {
+		return new Promise((resolve, reject) => {
+			setTimeout(() => {
+				if (_find(productsData, {productname: products.productid})) {
+					var existingProductsIndex = _indexOf(productsData, _find(productsData, {id: products.productId}));
+					productsData.splice(existingProductsIndex, 1, products);
 
-	// 			} else {
-	// 				productsData.push(products);
-	// 			}
-	// 			resolve(_clone(products))
-	// 		}, delay);
-	// 	})
-	// }
+				} else {
+					productsData.push(products);
+				}
+				resolve(_clone(products))
+			}, delay);
+		})
+	}
 
 }
 
