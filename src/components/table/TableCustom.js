@@ -45,6 +45,7 @@ export class TableCustom extends Component {
                   toggleCheckbox: this.props.toggleCheckbox,
                   deletePage: this.props.deletePage,
                   editPage: this.props.editPage,
+                  clonePage: this.props.clonePage
                 }))
               })}
 

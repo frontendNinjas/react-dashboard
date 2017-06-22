@@ -8,6 +8,11 @@ export function deletePage(title){
 	return {type:'DELETE_PAGE', title:title}
 }
 
+export function clonePage(title){
+    console.log("title ", title);
+	return {type:'CLONE_PAGE', title:title}
+}
+
 export function addPage(pages){
 	return {type:'ADD_PAGE', pages:pages}
 }

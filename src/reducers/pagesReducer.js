@@ -13,7 +13,16 @@ export default function pagesReducer(state = [], action) {
       return n.title !== action.title;
     })
     return removedPage
-  } else {
+  } else if (action.type === 'CLONE_PAGE') {
+    debugger;
+    const cloneRow = Object.assign([], state);
+    console.log("clone 2", state);
+    var foundIndex = cloneRow.findIndex(x => x.title == action.title);
+    console.log("foundIndex 3 ", foundIndex);
+    cloneRow[foundIndex] = action.title
+     console.log("cloneRow ", cloneRow);
+    return cloneRow;
+  } else {.
     return [...state]
   }
 }

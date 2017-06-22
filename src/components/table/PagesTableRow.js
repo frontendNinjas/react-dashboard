@@ -18,7 +18,10 @@ export const PagesTableRow = (props) => (
                     onClick={() => props.editPage(props.rowdata.title)}
                     label="Edit"
                     primary={true}/>
-                <FlatButton label="Clone" primary={true}/>
+                <FlatButton
+                    onClick={() => props.clonePage(props.rowdata.title)}
+                    label="Clone"
+                    primary={true}/>
                 <FlatButton
                     onClick={() => props.deletePage(props.rowdata.title)}
                     label="Trash"
