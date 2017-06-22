@@ -8,11 +8,11 @@ const LeftSidebar = (props) => {
       <div className={props.themes}>
         <MenuItem containerElement={< Link to = "/admin" />}>Dashboard</MenuItem>
         <MenuItem containerElement={< Link to = "/admin/website-pages-admin" />}>Pages</MenuItem>
-        <MenuItem className="whiteColor">Products
-          <MenuItem containerElement={< Link to = "/admin/all-products" />}>All Products</MenuItem>
+        <MenuItem
+          className="whiteColor"
+          containerElement={< Link to = "/admin/all-products" />}>Products
         </MenuItem>
-        <MenuItem >Users
-          <MenuItem containerElement={< Link to = "/admin/all-users" />}>All Users</MenuItem>
+        <MenuItem containerElement={< Link to = "/admin/all-users" />}>Users
         </MenuItem>
         <MenuItem containerElement={< Link to = "/admin/inventory" />}>Inventory</MenuItem>
         <MenuItem containerElement={< Link to = "/admin/themes" />}>Themes

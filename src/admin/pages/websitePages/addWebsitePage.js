@@ -34,7 +34,7 @@ const styles = {
 };
 
 
-class addNewProducts extends React.Component {
+class addWebsitePage extends React.Component {
 
   constructor(props) {
     super(props);
@@ -76,7 +76,7 @@ class addNewProducts extends React.Component {
     this
       .context
       .router
-      .push('/admin/all-products');
+      .push('/admin/website-pages-admin');
   }
 
   render() {
@@ -91,7 +91,7 @@ class addNewProducts extends React.Component {
   }
 }
 
-addNewProducts.contextTypes = {
+addWebsitePage.contextTypes = {
   router: PropTypes.object
 }
 
@@ -123,4 +123,4 @@ function mapDispatchToProps(dispatch) {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(addNewProducts);
+export default connect(mapStateToProps, mapDispatchToProps)(addWebsitePage);

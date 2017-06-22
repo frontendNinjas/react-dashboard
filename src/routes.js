@@ -9,11 +9,11 @@ import productsPageAdmin from '../src/admin/pages/products/productsPageAdmin';
 import usersPageAdmin from '../src/admin/pages/users/usersPageAdmin';
 import homePageUser from '../src/user/pages/homePageUser';
 import registerPageAdmin from '../src/admin/pages/registerPageAdmin';
-import websitePagesAdmin from '../src/admin/pages/websitePagesAdmin';
+import websitePagesAdmin from '../src/admin/pages/websitePages/websitePagesAdmin';
 import themes from '../src/admin/pages/themes/themesPageAdmin';
 import addNewProducts from '../src/admin/pages/products/addNewProducts';
 import dashboardMain from '../src/admin/pages/dashboard/dashboardMain';
-
+import addWebsitePage from '../src/admin/pages/websitePages/addWebsitePage';
 
 export default(
 		<Route>
@@ -33,6 +33,7 @@ export default(
 				<Route path="/admin/themes" component={themes}/>
 				<Route path="/admin/add-new-products" component={addNewProducts}/>
 				<Route path="/admin/add-new-products/:id" component={addNewProducts}/>
+				<Route path="/admin/add-website" component={addWebsitePage}/>
 			</Route> 			
         </Route>  
     )

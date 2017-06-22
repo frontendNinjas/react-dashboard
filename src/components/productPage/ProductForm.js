@@ -77,7 +77,7 @@ const ProductForm = (props) => {
                   <h4 className="marginLeft">Product Image</h4>
                 </Row>
                 <Row className="marginLeft">
-                  <ImageUpload name="image" value={props.products.image} onChange={props.onChange}/>
+                  <ImageUpload name="file" onChange={props.onChange}/>
                 </Row>
                 <br/>
                 <div className="greyBackground">
