@@ -42,7 +42,9 @@ export class TableCustom extends Component {
                   toDoForUpdate: this.props.toDoForUpdate,
                   deleteToDo: this.props.deleteToDo,
                   toDoItemModalOpen: this.props.toDoItemModalOpen,
-                  toggleCheckbox: this.props.toggleCheckbox
+                  toggleCheckbox: this.props.toggleCheckbox,
+                  deletePage: this.props.deletePage,
+                  editPage: this.props.editPage,
                 }))
               })}
 

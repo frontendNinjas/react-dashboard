@@ -6,8 +6,8 @@ import Input from '../../../../src/components/Input';
 import Checkbox from 'material-ui/Checkbox';
 import {List, ListItem} from 'material-ui/List';
 import Buttons from '../../../../src/components/Buttons';
-import ProductForm from '../../../../src/components/productPage/ProductForm'
-import * as productActions from '../../../../src/actions/productActions'
+import NewPageForm from '../../../../src/components/forms/newPageForm'
+import * as pagesAction from '../../../../src/actions/pagesAction'
 
 const style = {
   margin: 12
@@ -33,7 +33,6 @@ const styles = {
   }
 };
 
-
 class addWebsitePage extends React.Component {
 
   constructor(props) {
@@ -41,37 +40,43 @@ class addWebsitePage extends React.Component {
     this.onChange = this
       .onChange
       .bind(this);
-    this.saveProduct = this
-      .saveProduct
+    this.savePages = this
+      .savePages
       .bind(this);
     this.state = {
-      products: Object.assign({}, this.props.products),
-      errors: {}
+      pages: {
+        title: '',
+        author: '',
+        bodyHtml: '',
+        date: '',
+        pageTemplate: '',
+        file: ''
+      }
     }
   }
 
   onChange(e) {
     e.preventDefault();
     const field = e.target.name;
-    let newProduct = Object.assign({}, this.state.products)
-    newProduct[field] = e.target.value;
-    this.setState({products: newProduct});
+    let newPage = Object.assign({}, this.state.pages)
+    newPage[field] = e.target.value;
+    this.setState({pages: newPage});
   }
 
-  saveProduct(e) {
+  savePages(e) {
     e.preventDefault();
-    let newProduct = Object.assign({}, this.state.products)
-    if (typeof newProduct.productid === 'undefined') {
-      newProduct.productid = newProduct.productCode;
+    let newPage = Object.assign({}, this.state.pages)
+    if (typeof newPage.pageid === 'undefined') {
+      newPage.pageid = newPage.title;
       this
         .props
         .actions
-        .createProductsSuccess(newProduct);
+        .addPage(newPage);
     } else {
       this
         .props
         .actions
-        .updateProducts(this.state.products);
+        .updatePage(newPage);
     }
     this
       .context
@@ -82,9 +87,9 @@ class addWebsitePage extends React.Component {
   render() {
     return (
       <div>
-        <ProductForm
-          onSave={this.saveProduct}
-          products={this.state.products}
+        <NewPageForm
+          onSave={this.savePages}
+          pages={this.state.pages}
           onChange={this.onChange}/>
       </div>
     )
@@ -95,31 +100,13 @@ addWebsitePage.contextTypes = {
   router: PropTypes.object
 }
 
-function getProductsByProductname(products, productname) {
-  const product = products.filter(product => product.productname == productname)
-  if (product.length) 
-    return product[0];
-  return null;
-}
-
 function mapStateToProps(state, ownProps) {
-  let products = {
-    productname: '',
-    price: '',
-    bodyHtml: '',
-    file: '',
-    productCode: '',
-  };
-  const productname = ownProps.params.id
-  if (productname) {
-    products = getProductsByProductname(state.products, productname);
-  }
-  return {products: products}
+  return {pages: state.pages}
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(productActions, dispatch)
+    actions: bindActionCreators(pagesAction, dispatch)
   }
 }
 

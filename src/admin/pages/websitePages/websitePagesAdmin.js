@@ -10,12 +10,8 @@ import * as pagesAction from '../../../../src/actions/pagesAction'
 class websitePagesAdmin extends React.Component {
   constructor(props) {
     super(props);
-    this
-      .props
-      .actions
-      .loadPages();
     this.state = {
-      header: ['Title', 'Author', 'Date', 'Page Layout', '']
+      header: ['Title', 'Author', 'Published Date', 'Page Layout', '']
     }
 
     this.deletePage = this
@@ -25,6 +21,10 @@ class websitePagesAdmin extends React.Component {
 
   deletePage(id) {
     console.log("delete page", id)
+    this
+      .props
+      .actions
+      .deletePage(id);
   }
 
   render() {
@@ -40,7 +40,8 @@ class websitePagesAdmin extends React.Component {
           <TableCustom
             headerItems={this.state.header}
             data={this.props.pages}
-            deletePage={this.deletePage}>
+            deletePage={this.deletePage}
+            editPage={this.editPage}>
             <PagesTableRow/>
           </TableCustom>
         </div>
