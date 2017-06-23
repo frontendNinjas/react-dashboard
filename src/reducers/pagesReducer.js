@@ -22,7 +22,7 @@ export default function pagesReducer(state = [], action) {
     cloneRow[foundIndex] = action.title
      console.log("cloneRow ", cloneRow);
     return cloneRow;
-  } else {.
+  } else {
     return [...state]
   }
 }
